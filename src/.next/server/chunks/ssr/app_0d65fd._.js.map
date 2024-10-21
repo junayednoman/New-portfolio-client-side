@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 5, "column": 0}, "map": {"version":3,"sources":["/turbopack/[project]/src/app/providers/index.tsx"],"sourcesContent":["\"use client\";\r\nimport AuthProvider from \"@/context/auth.provider\";\r\nimport { StyleProvider } from \"@ant-design/cssinjs\";\r\nimport { QueryClient, QueryClientProvider } from \"@tanstack/react-query\";\r\nimport { ReactNode } from \"react\";\r\nimport { Toaster } from \"sonner\";\r\n\r\nconst queryClient = new QueryClient();\r\n\r\nconst Providers = ({ children }: { children: ReactNode }) => {\r\n  return (\r\n    <StyleProvider layer>\r\n      <AuthProvider>\r\n        <Toaster position=\"top-center\" duration={1800} />\r\n        <QueryClientProvider client={queryClient}>\r\n          {children}\r\n        </QueryClientProvider>\r\n      </AuthProvider>\r\n    </StyleProvider>\r\n  );\r\n};\r\n\r\nexport default Providers;\r\n"],"names":[],"mappings":";;;;;;;;;;;;;;;AAAA;;;;;;AAOA,MAAM,cAAc,IAAI,6KAAA,CAAA,cAAW;AAEnC,MAAM,YAAY,CAAC,EAAE,QAAQ,EAA2B;IACtD,qBACE,wPAAC,gKAAA,CAAA,gBAAa;QAAC,KAAK;kBAClB,cAAA,wPAAC;;8BACC,wPAAC,wIAAA,CAAA,UAAO;oBAAC,UAAS;oBAAa,UAAU;;;;;;8BACzC,wPAAC,sLAAA,CAAA,sBAAmB;oBAAC,QAAQ;8BAC1B;;;;;;;;;;;;;;;;;AAKX;uCAEe"}},
+    {"offset": {"line": 61, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

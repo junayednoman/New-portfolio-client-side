@@ -1,0 +1,303 @@
+* {
+  margin-bottom: 0 !important;
+}
+body {
+  color: #2d2d2d;
+  background: var(--background);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #2d2d2d;
+}
+
+p {
+  color: #2d2d2d;
+}
+a {
+  text-decoration: none !important;
+  color: #2d2d2d;
+}
+
+.FCardShadow {
+  transition: 0.3s ease !important;
+  box-shadow: 0 0 2px 0 rgba(145, 158, 171, 0.2),
+    0 12px 24px -4px rgba(145, 158, 171, 0.12);
+}
+
+.Fshadow {
+  transition: 0.3s ease !important;
+  box-shadow: 0px 3px 15px rgba(255, 167, 38, 0.5) !important;
+}
+.Fshadow:hover {
+  box-shadow: none !important;
+}
+
+.button {
+  background-color: #000000 !important;
+  color: #fff !important;
+  font-weight: 500 !important;
+  text-transform: uppercase;
+}
+.button:hover {
+  background-color: #08416f !important;
+  color: #fff !important;
+  border: 1px solid #08416f !important;
+}
+
+.ant-card-body {
+  padding: 0 !important;
+}
+.ant-form-item-label {
+  padding-bottom: 3px;
+  text-transform: capitalize;
+}
+
+.ant-picker:focus {
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+.slick-arrow.slick-prev {
+  padding: 27px;
+  margin-left: -35px;
+  background: #fff;
+  opacity: 80;
+  border-radius: 100%;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 18px 0 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+.slick-arrow.slick-prev::after {
+  top: 40%;
+  left: 42%;
+  width: 13px;
+  height: 13px;
+}
+.slick-arrow.slick-next {
+  padding: 27px;
+  margin-right: -35px;
+  background: #fff;
+  opacity: 80;
+  border-radius: 100%;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -18px 0 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+.slick-arrow.slick-next::after {
+  top: 40%;
+  left: 35%;
+  width: 13px;
+  height: 13px;
+}
+
+.headerBorder {
+  border-bottom: 1px solid #edebeb;
+}
+
+.FeaturedCarouselItem {
+  display: grid !important;
+}
+
+.arrow--left {
+  top: 40%;
+  left: -10px !important;
+  position: absolute;
+  width: 42px !important;
+  height: 42px !important;
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.2) !important;
+  color: #000;
+  padding: 13px;
+  border-radius: 100%;
+  background: #fff;
+  cursor: pointer;
+}
+.arrow--right {
+  top: 40%;
+  right: -10px !important;
+  position: absolute;
+  width: 42px !important;
+  height: 42px !important;
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.2) !important;
+  color: #000;
+  padding: 13px;
+  border-radius: 100%;
+  background: #fff;
+  cursor: pointer;
+}
+
+.ant-collapse-header-text {
+  font-weight: 600;
+}
+.ant-collapse-item-active .ant-collapse-header-text,
+.ant-collapse-item-active .ant-collapse-expand-icon {
+  color: #08416f !important;
+}
+
+.ant-tabs-nav-wrap {
+  padding: 0 20px !important;
+}
+
+.ant-tabs-tab-active .ant-tabs-tab-btn {
+  font-weight: 500;
+  color: #08416f !important;
+}
+.ant-tabs-tab:hover .ant-tabs-tab-btn {
+  font-weight: 500;
+  color: #08416f !important;
+}
+
+.ant-tabs-tab .ant-tabs-tab-btn {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.ant-tabs-nav-list {
+  gap: 20px !important;
+}
+
+.ant-tabs-ink-bar {
+  background-color: #08416f !important;
+}
+
+.ant-tabs-content-holder {
+  padding: 20px 0 !important;
+}
+
+.ant-pagination-item-active {
+  border: 1px solid #08416f !important;
+}
+
+.ant-pagination-item-active a {
+  color: #08416f !important;
+}
+
+.ant-pagination-item-container svg {
+  color: #08416f !important;
+}
+
+.ant-menu-item-selected {
+  background-color: #08416f !important;
+  color: #fff !important;
+}
+
+.logoutItem .ant-menu-item-selected {
+  background-color: transparent !important;
+}
+.logoutItem .ant-menu-item-selected svg,
+.ant-menu-item-selected a {
+  color: red !important;
+}
+
+.ant-menu-item-selected svg,
+.ant-menu-item-selected a {
+  color: white !important;
+}
+
+.dashMenuItems .ant-menu-item {
+  background-color: transparent;
+  color: #1b263b !important;
+  border-radius: 10px;
+}
+
+.dashboardSidebar {
+  background-color: #fff !important;
+  box-shadow: 0px 1px 53px -55px rgba(0, 0, 0, 0.68) !important;
+}
+
+.dashboardHeader {
+  background-color: #fff;
+  box-shadow: 0px 2px 53px -30px rgba(0, 0, 0, 0.68);
+  z-index: 99 !important;
+}
+
+.ant-upload.ant-upload-btn {
+  padding: 20px;
+}
+
+.ant-upload.ant-upload-drag {
+  background-color: #fff;
+}
+.ant-upload.ant-upload-drag:hover {
+  border-color: #2d2d2d !important;
+}
+
+.ant-popconfirm-buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
+.ant-btn-primary {
+  color: white !important;
+  background-color: #08416f !important;
+}
+.mySearchInput input {
+  height: 60px;
+  margin-top: -20px;
+  border: none;
+}
+.mySearchInput p {
+  display: none;
+}
+.mySearchInput input::placeholder {
+  font-weight: 500;
+  font-size: 15px;
+  color: #2d2d2d7c;
+}
+
+.searchModal .ant-modal-content {
+  padding: 20px 0 !important;
+}
+
+.postDetailPage img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.postDetailPage p {
+  line-height: 25px;
+}
+.postDetailPage a {
+  color: blue;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.ant-float-btn-icon {
+  margin-top: 0;
+}
+
+.gotop .css-dev-only-do-not-override-ccdg5a {
+  background: #08416f;
+  border-radius: 100%;
+}
+
+.gotop .ant-float-btn-body {
+  background: #08416f;
+  border: #08416f;
+}
+.gotop svg {
+  background: #08416f;
+  border: #08416f;
+  color: #fff !important;
+}
+
+/* Import Ant Design reset first to avoid conflicts */
+/* @import "antd/dist/reset.css"; */
+
+/* Tailwind base, components, and utilities */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
