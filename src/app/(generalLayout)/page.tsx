@@ -3,7 +3,7 @@ import Hero from "../components/sections/Hero";
 
 const Page = () => {
   return (
-    <main className="bg-black min-h-screen flex flex-col w-full">
+    <main className="bg-black min-h-screen h-auto flex flex-col w-full">
       <Hero />
       <About />
     </main>
