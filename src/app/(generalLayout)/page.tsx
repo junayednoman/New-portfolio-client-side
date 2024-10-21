@@ -1,9 +1,11 @@
+import About from "../components/sections/About";
 import Hero from "../components/sections/Hero";
 
 const Page = () => {
   return (
-    <main className="bg-[#0A0A0A] min-h-screen overflow-x-hidden w-full">
+    <main className="bg-black min-h-screen flex flex-col w-full">
       <Hero />
+      <About />
     </main>
   );
 };

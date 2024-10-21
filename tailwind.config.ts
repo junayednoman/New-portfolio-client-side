@@ -76,6 +76,7 @@ const config = {
       },
       fontFamily: {
         inter: ["var(--font-inter)"],
+        poppins: ["var(--font-poppins)"],
       },
       borderRadius: {
         lg: "var(--radius)",

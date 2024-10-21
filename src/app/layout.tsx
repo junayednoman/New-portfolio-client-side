@@ -1,15 +1,21 @@
 import type { Metadata } from "next";
 // import "@/styles/globals.css"; // Tailwind Global Styles
 import "antd/dist/reset.css"; // Ant Design CSS
-import { Inter } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 // Import css files
 import "./globals.css";
 import Providers from "../providers";
 
 const inter = Inter({
-  weight: ["500", "600", "700"],
+  weight: ["500", "600", "700", "800"],
   variable: "--font-inter",
+  subsets: ["latin"],
+});
+
+const poppins = Poppins({
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-poppins",
   subsets: ["latin"],
 });
 
@@ -28,7 +34,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="icon.svg" sizes="any" />
       </head>
-      <body className={`${inter.variable} font-montserrat`}>
+      <body className={`${inter.variable} ${poppins.variable} font-montserrat`}>
         <Providers>
           <AntdRegistry>{children}</AntdRegistry>
         </Providers>
