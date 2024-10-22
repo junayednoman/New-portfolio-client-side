@@ -48,7 +48,7 @@ export function Skills() {
       <DotBackground>
         <div className="md:pt-16 pb-10 pt-14 relative">
           <FContainer>
-            <SectionTitle>Top Skills</SectionTitle>
+            <SectionTitle>Powered by</SectionTitle>
             <div
               className="relative flex w-full items-center justify-center overflow-hidden rounded-lg bg-background p-10 md:shadow-xl"
               ref={containerRef}
@@ -57,6 +57,7 @@ export function Skills() {
                 <div className="flex flex-row items-center justify-between">
                   <Circle ref={div1Ref}>
                     <Image
+                      className="pointer-events-none"
                       src={typescriptIcon}
                       alt="Typescript"
                       width={20}
@@ -65,6 +66,7 @@ export function Skills() {
                   </Circle>
                   <Circle ref={div5Ref}>
                     <Image
+                      className="pointer-events-none"
                       src={nodeIcon}
                       alt="node js"
                       width={20}
@@ -74,14 +76,20 @@ export function Skills() {
                 </div>
                 <div className="flex flex-row items-center justify-between">
                   <Circle ref={div2Ref}>
-                    <Image src={reactIcon} alt="react" width={24} height={24} />
+                    <Image
+                      className="pointer-events-none"
+                      src={reactIcon}
+                      alt="react"
+                      width={24}
+                      height={24}
+                    />
                   </Circle>
                   <Circle ref={div4Ref} className="size-16">
                     <Image
                       src={
                         "https://junayed-noman.web.app/assets/junayed%20noman-_X6r-cS-.jpg"
                       }
-                      className="rounded-full"
+                      className="rounded-full pointer-events-none"
                       alt="junayed noman"
                       width={35}
                       height={35}
@@ -89,7 +97,7 @@ export function Skills() {
                   </Circle>
                   <Circle ref={div6Ref}>
                     <Image
-                      className="w-[50px]"
+                      className="w-[50px] pointer-events-none"
                       src={mongooseIcon}
                       alt="react"
                       width={50}
@@ -99,10 +107,17 @@ export function Skills() {
                 </div>
                 <div className="flex flex-row items-center justify-between">
                   <Circle ref={div3Ref}>
-                    <Image src={reduxIcon} alt="redux" width={21} height={21} />
+                    <Image
+                      className="pointer-events-none"
+                      src={reduxIcon}
+                      alt="redux"
+                      width={21}
+                      height={21}
+                    />
                   </Circle>
                   <Circle ref={div7Ref}>
                     <Image
+                      className="pointer-events-none"
                       src={expressIcon}
                       alt="express"
                       width={19}
