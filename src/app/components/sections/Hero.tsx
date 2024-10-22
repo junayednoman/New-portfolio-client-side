@@ -25,7 +25,7 @@ const Hero = () => {
               A MERN Stack Developer with expertise in{" "}
               <HighLightText>Typescript & NextJs</HighLightText> , building
               secure and impactful web applications. My work spans from
-              intuitive front-end designs to robust back-end systems.
+              front-end designs to robust back-end systems.
             </p>
             <div className="flex sm:flex-row flex-col items-center gap-4 justify-center mb-2 mt-14">
               <a href="#projects" className="cursor-default">

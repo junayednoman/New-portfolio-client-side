@@ -112,14 +112,17 @@ const About = () => {
               <RevealText
                 text={`${
                   window.innerWidth <= 1024 ? "Swipe" : "Hover"
-                } to reveal the secret`}
-                revealText="I can speak in English 🎉"
+                } to reveal a secret`}
+                revealText="I can speak in English"
               ></RevealText>
             </div>
             <div className="w-full border dark:border-neutral-700 rounded-[12px] p-8">
               <div>
                 <h5 className="font-semibold sm:text-xl text-lg text-center">
-                  My Key <HighLightText>Strengths</HighLightText>
+                  My Key{" "}
+                  <HighLightText>
+                    <span className="font-semibold">Strengths</span>
+                  </HighLightText>
                 </h5>
               </div>
 

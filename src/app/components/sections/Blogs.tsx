@@ -2,9 +2,7 @@ import Image from "next/image";
 import FContainer from "../ui/FContainer";
 import SectionTitle from "../ui/SectionTitle";
 import Link from "next/link";
-import { BackgroundLines } from "../ui/BackgroundLines";
 import { Popover } from "antd";
-import MagicButton from "../ui/MagicButton";
 import DotBackground from "../ui/DotBackground";
 
 const Blogs = () => {
@@ -237,16 +235,9 @@ const Blogs = () => {
                   </Link>
                 </div>
               </div>
-              <div className="z-50 flex md:justify-center mt-10">
+              {/* <div className="z-50 flex md:justify-center mt-10">
                 <MagicButton>View More</MagicButton>
-              </div>
-            </div>
-            <div className="md:-mt-[230px] lg:-ml-[660px] md:-ml-[560px]">
-              <div className="relative h-[520px] md:w-[850px] w-full">
-                <BackgroundLines>
-                  <span className="hidden">d</span>
-                </BackgroundLines>
-              </div>
+              </div> */}
             </div>
           </FContainer>
         </div>

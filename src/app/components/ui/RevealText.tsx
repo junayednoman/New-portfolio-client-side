@@ -91,14 +91,24 @@ export const RevealText = ({
           transition={isMouseOver ? { duration: 0 } : { duration: 0.4 }}
           className="absolute bg-[#1d1c20] z-20  will-change-transform"
         >
-          <p
-            style={{
-              textShadow: "4px 4px 15px rgba(0,0,0,0.5)",
-            }}
-            className=" text-center text-2xl sm:text-4xl py-10 font-bold text-white bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-300"
-          >
-            {revealText}
-          </p>
+          <div className="flex items-center gap-2 w-full justify-center mx-auto">
+            <p
+              style={{
+                textShadow: "4px 4px 15px rgba(0,0,0,0.5)",
+              }}
+              className=" text-center text-2xl sm:text-4xl py-10 font-bold text-white bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-300"
+            >
+              {revealText}
+            </p>
+            <p
+              style={{
+                textShadow: "4px 4px 15px rgba(0,0,0,0.5)",
+              }}
+              className=" text-center text-2xl sm:text-4xl py-10 font-bold text-white "
+            >
+              😉
+            </p>
+          </div>
         </motion.div>
         <motion.div
           animate={{
