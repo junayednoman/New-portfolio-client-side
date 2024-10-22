@@ -46,7 +46,7 @@ export function Skills() {
   return (
     <section className="relative">
       <DotBackground>
-        <div className="md:py-16 py-14 relative">
+        <div className="md:pt-16 pb-10 pt-14 relative">
           <FContainer>
             <SectionTitle>Top Skills</SectionTitle>
             <div
@@ -89,7 +89,7 @@ export function Skills() {
                   </Circle>
                   <Circle ref={div6Ref}>
                     <Image
-                      className="w-[40px]"
+                      className="w-[50px]"
                       src={mongooseIcon}
                       alt="react"
                       width={50}

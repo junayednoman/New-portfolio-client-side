@@ -166,6 +166,10 @@ const config = {
           '50%': { strokeDasharray: '50 800', opacity: ' 1' },
           '100%': { strokeDashoffset: '0', opacity: '0' },
         },
+        move: {
+          "0%": { transform: "translateX(-200px)" },
+          "100%": { transform: "translateX(200px)" },
+        },
       },
       animation: {
         'stroke-dash': 'dash 2s ease-in-out infinite',
@@ -183,6 +187,7 @@ const config = {
         fifth: "moveInCircle 20s ease infinite",
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+        move: "move 5s linear infinite",
       },
       stroke: {
         custom: '#custom-color', // Customize the stroke color if needed
