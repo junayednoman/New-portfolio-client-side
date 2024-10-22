@@ -9,7 +9,7 @@ const Blogs = () => {
   return (
     <section>
       <DotBackground>
-        <div className="md:py-24 py-16 relative">
+        <div className="md:pt-24 pt-16 relative">
           <div className="relative">
             <div
               className="lg:h-[600px] h-[400px] lg:w-[600px] w-[400px] absolute lg:top-0 top-60 xl:right-40 right-0 z-0"

@@ -1,9 +1,14 @@
 * {
   margin-bottom: 0 !important;
 }
+body ::selection {
+  background: #e4983b; /* Purple to Lavender */
+  color: white !important; /* Optional: Change text color on selection */
+}
 body {
   color: #2d2d2d;
   background: var(--background);
+  font-family: var(--font-poppins);
 }
 h1,
 h2,
@@ -11,12 +16,12 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: var(--font-inter);
   color: #fff;
 }
 
 p {
   color: #fff;
-  font-family: var(--font-poppins);
   font-weight: 400;
 }
 a {
