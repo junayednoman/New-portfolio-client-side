@@ -15,6 +15,7 @@ import { Marquee } from "../ui/Marquee";
 import ShinyButton from "../ui/ShinyButton";
 import SectionTitle from "../ui/SectionTitle";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+import { RevealText } from "../ui/RevealText";
 
 const About = () => {
   const firstRow = AllStrengths.slice(0, AllStrengths.length / 2);
@@ -28,19 +29,21 @@ const About = () => {
           <div className="mt-12 grid lg:grid-cols-2 gap-8">
             <div className="border rounded-[12px] border-neutral-700 sm:p-6 p-5 flex flex-col justify-between">
               <div>
-                <div className="flex gap-3 max-w-[300px]">
+                <div className="flex gap-3">
                   <div className="border-[2px] border-neutral-400 rounded-[10px]">
                     <Image
                       src="https://junayed-noman.web.app/assets/junayed%20noman-_X6r-cS-.jpg"
                       alt="me"
                       width={70}
                       height={70}
-                      className="rounded-[10px] border-2 "
+                      className="rounded-[10px] border-2"
                     />
                   </div>
                   <div className="text-white py-2">
                     <h5 className="font-semibold text-lg">Junayed Noman</h5>
-                    <p className="text-slate-300 mt-2">Available to hire</p>
+                    <p className="text-slate-300 mt-2 text-sm">
+                      junayednoman05@gmail.com
+                    </p>
                   </div>
                 </div>
                 <p className="text-white-100 text-sm leading-[22px] mt-4">
@@ -104,44 +107,52 @@ const About = () => {
           </div>
 
           {/* about me bottom */}
-          <div className="mt-7 flex items-center lg:gap-x-8 gap-0">
-            <div className="w-full h-[200px] border dark:border-neutral-700 rounded-[12px] sm:p-6 p-5 hidden"></div>
-            <div className=" w-full border dark:border-neutral-700 rounded-[12px] p-8">
+          <div className="mt-7 flex xl:flex-row flex-col items-center lg:gap-8 gap-5 overflow-hidden">
+            <div className="flex xl:w-[520px] w-full items-center justify-center h-[208px] bg-[#1D1C20] border dark:border-neutral-700 rounded-[12px]">
+              <RevealText
+                text={`${
+                  window.innerWidth <= 1024 ? "Swipe" : "Hover"
+                } to reveal the secret`}
+                revealText="I can speak in English 🎉"
+              ></RevealText>
+            </div>
+            <div className="w-full border dark:border-neutral-700 rounded-[12px] p-8">
               <div>
                 <h5 className="font-semibold sm:text-xl text-lg text-center">
-                  My Key{" "}
-                  <HighLightText fontWeight={600}>Strengths</HighLightText>
+                  My Key <HighLightText>Strengths</HighLightText>
                 </h5>
               </div>
 
-              <div className="relative flex flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl mt-6">
-                <Marquee
-                  pauseOnHover
-                  className="lg:[--duration:70s] md:[--duration:95s] [--duration:125s] [--gap:8px]"
-                >
-                  {firstRow.map((item) => (
-                    <div
-                      key={item.title}
-                      className="flex p-2 rounded-[10px] border border-neutral-700"
-                    >
-                      <ShinyButton icon={item.icon}>{item.title}</ShinyButton>
-                    </div>
-                  ))}
-                </Marquee>
-                <Marquee
-                  reverse
-                  pauseOnHover
-                  className="lg:[--duration:70s] md:[--duration:95s] [--duration:125s] [--gap:8px]"
-                >
-                  {secondRow.map((item) => (
-                    <div
-                      key={item.title}
-                      className="flex p-2 rounded-[10px] border border-neutral-700"
-                    >
-                      <ShinyButton icon={item.icon}>{item.title}</ShinyButton>
-                    </div>
-                  ))}
-                </Marquee>
+              <div className="relative flex flex-col items-center justify-center overflow-hidden bg-background md:shadow-xl mt-6 xl:max-w-[700px] max-w-full mx-auto">
+                <div>
+                  <Marquee
+                    pauseOnHover
+                    className="lg:[--duration:70s] md:[--duration:95s] [--duration:125s] [--gap:8px]"
+                  >
+                    {firstRow.map((item) => (
+                      <div
+                        key={item.title}
+                        className="flex p-2 rounded-[10px] border border-neutral-700"
+                      >
+                        <ShinyButton icon={item.icon}>{item.title}</ShinyButton>
+                      </div>
+                    ))}
+                  </Marquee>
+                  <Marquee
+                    reverse
+                    pauseOnHover
+                    className="lg:[--duration:70s] md:[--duration:95s] [--duration:125s] [--gap:8px]"
+                  >
+                    {secondRow.map((item) => (
+                      <div
+                        key={item.title}
+                        className="flex p-2 rounded-[10px] border border-neutral-700"
+                      >
+                        <ShinyButton icon={item.icon}>{item.title}</ShinyButton>
+                      </div>
+                    ))}
+                  </Marquee>
+                </div>
               </div>
             </div>
           </div>
