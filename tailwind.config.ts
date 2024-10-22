@@ -161,8 +161,14 @@ const config = {
             transform: "translate(calc(-50% - 0.5rem))",
           },
         },
+        dash: {
+          '0%': { strokeDashoffset: '800', opacity: '0' },
+          '50%': { strokeDasharray: '50 800', opacity: ' 1' },
+          '100%': { strokeDashoffset: '0', opacity: '0' },
+        },
       },
       animation: {
+        'stroke-dash': 'dash 2s ease-in-out infinite',
         shine: 'shine 2s linear infinite',
         marquee: 'marquee var(--duration) linear infinite',
         'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
@@ -177,6 +183,9 @@ const config = {
         fifth: "moveInCircle 20s ease infinite",
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+      },
+      stroke: {
+        custom: '#custom-color', // Customize the stroke color if needed
       },
     },
   },

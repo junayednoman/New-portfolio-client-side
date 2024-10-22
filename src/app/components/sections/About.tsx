@@ -12,19 +12,16 @@ import HighLightText from "../ui/HighLightText";
 import { AllStrengths, KeyStrengths } from "../../../constants/about.constant";
 import { Marquee } from "../ui/Marquee";
 import ShinyButton from "../ui/ShinyButton";
+import SectionTitle from "../ui/SectionTitle";
 
 const About = () => {
   const firstRow = AllStrengths.slice(0, AllStrengths.length / 2);
   const secondRow = AllStrengths.slice(AllStrengths.length / 2);
   return (
-    <section id="about" className="md:pb-20 md:pt-0 pt-12 z-10">
+    <section id="about" className="md:pb-20 pb-8 md:pt-0 pt-12 z-10">
       <FContainer>
         <div className="">
-          <div>
-            <div className="md:text-3xl text-2xl text-white font-bold text-center uppercase flex items-center justify-center gap-3">
-              <span>About Me</span>
-            </div>
-          </div>
+          <SectionTitle>About me</SectionTitle>
 
           <div className="mt-12 grid lg:grid-cols-2 gap-8">
             <div className="border rounded-[12px] border-neutral-700 sm:p-6 p-5 flex flex-col justify-between">
@@ -100,7 +97,7 @@ const About = () => {
           {/* about me bottom */}
           <div className="mt-7 flex items-center lg:gap-x-8 gap-0">
             <div className="w-full h-[200px] border dark:border-neutral-700 rounded-[12px] sm:p-6 p-5 hidden"></div>
-            <div className=" w-full border dark:border-neutral-700 rounded-[12px] sm:p-6 p-5">
+            <div className=" w-full border dark:border-neutral-700 rounded-[12px] p-8">
               <div>
                 <h5 className="font-semibold sm:text-xl text-lg text-center">
                   My Key{" "}
@@ -136,8 +133,6 @@ const About = () => {
                     </div>
                   ))}
                 </Marquee>
-                {/* <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
-                <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div> */}
               </div>
             </div>
           </div>
