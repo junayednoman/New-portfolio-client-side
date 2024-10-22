@@ -99,8 +99,8 @@ const About = () => {
 
           {/* about me bottom */}
           <div className="mt-7 flex items-center lg:gap-x-8 gap-0">
-            <div className="w-full h-[200px] border dark:border-neutral-700 rounded-[12px] sm:p-6 p-5 lg:block hidden"></div>
-            <div className="xl:w-[950px] lg:w-[700px] w-full border dark:border-neutral-700 rounded-[12px] sm:p-6 p-5">
+            <div className="w-full h-[200px] border dark:border-neutral-700 rounded-[12px] sm:p-6 p-5 hidden"></div>
+            <div className=" w-full border dark:border-neutral-700 rounded-[12px] sm:p-6 p-5">
               <div>
                 <h5 className="font-semibold sm:text-xl text-lg text-center">
                   My Key{" "}
@@ -111,7 +111,7 @@ const About = () => {
               <div className="relative flex flex-col items-center justify-center overflow-hidden rounded-lg bg-background md:shadow-xl mt-6">
                 <Marquee
                   pauseOnHover
-                  className="lg:[--duration:80s] md:[--duration:95s] [--duration:125s] [--gap:8px]"
+                  className="lg:[--duration:70s] md:[--duration:95s] [--duration:125s] [--gap:8px]"
                 >
                   {firstRow.map((item) => (
                     <div
@@ -125,7 +125,7 @@ const About = () => {
                 <Marquee
                   reverse
                   pauseOnHover
-                  className="lg:[--duration:80s] md:[--duration:95s] [--duration:125s] [--gap:8px]"
+                  className="lg:[--duration:70s] md:[--duration:95s] [--duration:125s] [--gap:8px]"
                 >
                   {secondRow.map((item) => (
                     <div
