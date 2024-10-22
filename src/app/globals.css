@@ -296,6 +296,11 @@ a {
   color: #fff !important;
 }
 
+.ant-popover-inner {
+  padding: 2px;
+  border-radius: 12px;
+}
+
 /* Import Ant Design reset first to avoid conflicts */
 /* @import "antd/dist/reset.css"; */
 

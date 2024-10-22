@@ -1,4 +1,5 @@
-import { FaCloudDownloadAlt, FaGithub, FaLinkedin } from "react-icons/fa";
+"use client";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import FContainer from "../ui/FContainer";
 import FeatureCard from "../ui/FeatureCard";
 import Image from "next/image";
@@ -13,6 +14,7 @@ import { AllStrengths, KeyStrengths } from "../../../constants/about.constant";
 import { Marquee } from "../ui/Marquee";
 import ShinyButton from "../ui/ShinyButton";
 import SectionTitle from "../ui/SectionTitle";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 const About = () => {
   const firstRow = AllStrengths.slice(0, AllStrengths.length / 2);
@@ -79,9 +81,16 @@ const About = () => {
                     <FaSquareXTwitter size={20} />
                   </PIcon>
                 </div>
-                <MagicButtonSmall icon={<FaCloudDownloadAlt size={18} />}>
-                  Download Resume
-                </MagicButtonSmall>
+                <a
+                  href="https://drive.google.com/file/d/1W6xp-K4rSH5h9h5VjhO7coGOzk1SaUKN/view?usp=sharing"
+                  target="_blank"
+                >
+                  <MagicButtonSmall
+                    icon={<FaArrowUpRightFromSquare size={13} />}
+                  >
+                    View Resume
+                  </MagicButtonSmall>
+                </a>
               </div>
             </div>
             <div className="relative">

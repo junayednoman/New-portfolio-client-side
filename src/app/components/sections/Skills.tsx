@@ -80,8 +80,8 @@ export function Skills() {
                       className="pointer-events-none"
                       src={reactIcon}
                       alt="react"
-                      width={24}
-                      height={24}
+                      width={30}
+                      height={30}
                     />
                   </Circle>
                   <Circle ref={div4Ref} className="size-16">
