@@ -96,21 +96,6 @@ const Skeleton = ({ techs }: { techs: string[] }) => {
   return (
     <div className="p-8 overflow-hidden h-full relative flex items-center justify-center">
       <div className="flex flex-row flex-shrink-0 justify-between items-center gap-2">
-        {/* <Container className="h-8 w-8 circle-1">
-          <ClaudeLogo className="h-4 w-4 " />
-        </Container>
-        <Container className="h-12 w-12 circle-2">
-          <GoCopilot className="h-6 w-6 dark:text-white" />
-        </Container>
-        <Container className="circle-3">
-          <OpenAILogo className="h-8 w-8 dark:text-white" />
-        </Container>
-        <Container className="h-12 w-12 circle-4">
-          <MetaIconOutline className="h-6 w-6 " />
-        </Container>
-        <Container className="h-8 w-8 circle-5">
-          <GeminiLogo className="h-4 w-4 " />
-        </Container> */}
         {techs.map((tech, i) => (
           <Container key={tech} className={`h-12 w-12 circle-${i + 1}`}>
             {projectTechs[tech]}
@@ -131,7 +116,7 @@ const Sparkles = () => {
   const randomOpacity = () => Math.random();
   const random = () => Math.random();
   return (
-    <div className="absolute inset-0">
+    <div className="absolute inset-0 top-6 h-[80px]">
       {[...Array(12)].map((_, i) => (
         <motion.span
           key={`star-${i}`}
