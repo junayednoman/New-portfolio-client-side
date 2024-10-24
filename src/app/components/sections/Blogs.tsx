@@ -5,9 +5,14 @@ import Container from "../ui/Container";
 import { useHandleQuery } from "../../../hooks/query";
 import BlogCard from "../ui/BlogCard";
 import { TBlog } from "../../../types/blog.type";
+import NodataPurple from "../ui/NodataPurple";
+import PurpleLoading from "../ui/PurpleLoading";
 
 const Blogs = () => {
-  const { data } = useHandleQuery("blogs", "/blogs", { isDeleted: false });
+  const { data, isError, isLoading } = useHandleQuery("blogs", "/blogs", {
+    isDeleted: false,
+    limit: 3,
+  });
   console.log("data, ", data);
   const blogs = data?.data?.result || [];
   return (
@@ -26,9 +31,14 @@ const Blogs = () => {
           <Container>
             <SectionTitle>Written thoughts</SectionTitle>
             <div className="md:mt-16 mt-10 z-10">
-              {blogs.map((blog: TBlog, i: number) => (
-                <BlogCard
-                  className={`
+              {isLoading ? (
+                <PurpleLoading />
+              ) : blogs?.length < 1 || isError ? (
+                <NodataPurple />
+              ) : (
+                blogs.map((blog: TBlog, i: number) => (
+                  <BlogCard
+                    className={`
                     ${
                       i === 0
                         ? "pb-10"
@@ -38,10 +48,11 @@ const Blogs = () => {
                     }
                     ${i !== blogs?.length - 1 && "border-b"}
                     `}
-                  key={blog._id}
-                  blog={blog}
-                />
-              ))}
+                    key={blog._id}
+                    blog={blog}
+                  />
+                ))
+              )}
               {/* <div className="z-50 flex md:justify-center mt-10">
                 <MagicButton>View More</MagicButton>
               </div> */}
