@@ -6,7 +6,7 @@ const SectionTitle = ({ children }: { children: React.ReactNode }) => {
       <TextGenerateEffect
         duration={0.5}
         className="md:text-4xl text-3xl text-white font-bold text-center uppercase"
-        words={children.toString()}
+        words={children!.toString()}
       />
     </>
   );

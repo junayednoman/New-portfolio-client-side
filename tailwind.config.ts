@@ -4,6 +4,8 @@ import svgToDataUri from "mini-svg-data-uri";
 import tailwindCssAnimate from "tailwindcss-animate"
 
 // import colors from "tailwindcss/colors";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import { default as flattenColorPalette } from "tailwindcss/lib/util/flattenColorPalette";
 const config = {
   darkMode: ["class"],

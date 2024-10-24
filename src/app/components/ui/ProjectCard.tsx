@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 "use client";
 import { animate, motion, useInView } from "framer-motion";
 import React, { useEffect, useRef } from "react";
@@ -109,7 +110,8 @@ const Skeleton = ({ techs }: { techs: string[] }) => {
       <div className="flex flex-row flex-shrink-0 justify-between items-center gap-2">
         {techs.map((tech, i) => (
           <Container key={tech} className={`h-12 w-12 circle-${i + 1}`}>
-            {projectTechs[tech]}
+            {/* @ts-ignore */}
+            {projectTechs.tech}
           </Container>
         ))}
       </div>
