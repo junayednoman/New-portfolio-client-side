@@ -21,6 +21,10 @@ h6 {
 
 p {
   font-weight: 400;
+  color: #bec1dd;
+}
+.rounded-full {
+  border-radius: 100% !important;
 }
 a {
   text-decoration: none !important;
@@ -284,7 +288,7 @@ a {
   max-width: 100%;
   height: auto;
   object-fit: contain;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 .postDetailPage p {
   line-height: 25px;
@@ -293,6 +297,10 @@ a {
   color: blue;
   font-weight: 600;
   text-decoration: underline;
+}
+
+.postDetailPage {
+  color: #bec1dd;
 }
 
 .ant-float-btn-icon {
