@@ -15,7 +15,7 @@ const Blogs = () => {
   });
   const blogs = data?.data?.result || [];
   return (
-    <section>
+    <section id="blogs">
       <DotBackground>
         <div className="md:pt-24 pt-16 relative">
           <div className="relative">
