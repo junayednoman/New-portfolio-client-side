@@ -25,6 +25,8 @@ const config = {
     },
     extend: {
       colors: {
+        accent: "#08416f",
+        text: "#2d2d2d",
         black: {
           DEFAULT: "#000",
           100: "#000319",
@@ -61,10 +63,6 @@ const config = {
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",

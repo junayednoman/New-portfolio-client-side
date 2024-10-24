@@ -2,14 +2,14 @@ import { FaFacebookSquare, FaGithub, FaLinkedin } from "react-icons/fa";
 import PIcon from "../ui/PIcon";
 import { FaArrowUpRightFromSquare, FaSquareXTwitter } from "react-icons/fa6";
 import MagicButtonSmall from "../ui/MagicButtonSmall";
-import FContainer from "../ui/FContainer";
+import Container from "../ui/Container";
 
 const Footer = () => {
   return (
-    <footer className="md:pb-10 pb-8 -mt-16 z-50">
-      <FContainer>
+    <footer className="md:pb-10 pb-8 -mt-16 z-50 bg-black">
+      <Container>
         <div className="flex sm:flex-row flex-col gap-y-5 items-center justify-between">
-          <p className="text-sm text-white-200">
+          <p className="text-sm text-white-200 z-50">
             Copyright © 2024 Junayed Noman
           </p>
           <div className="flex items-center sm:gap-4 gap-2">
@@ -35,7 +35,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-      </FContainer>
+      </Container>
     </footer>
   );
 };

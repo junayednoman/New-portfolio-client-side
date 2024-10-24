@@ -5,13 +5,9 @@ import { twMerge } from "tailwind-merge";
 import { cn } from "../../../lib/utils";
 
 export const RevealText = ({
-  text,
-  revealText,
   children,
   className,
 }: {
-  text: string;
-  revealText: string;
   children?: React.ReactNode;
   className?: string;
 }) => {
@@ -66,10 +62,7 @@ export const RevealText = ({
       onTouchEnd={mouseLeaveHandler}
       onTouchMove={touchMoveHandler}
       ref={cardRef}
-      className={cn(
-        "bg-[#1d1c20] w-[520px] relative overflow-hidden",
-        className
-      )}
+      className={cn("w-[520px] relative overflow-hidden", className)}
     >
       {children}
 
@@ -77,6 +70,8 @@ export const RevealText = ({
         <motion.div
           style={{
             width: "100%",
+            background:
+              "linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(29,28,32,0.6992137919620973) 40%, rgba(29,28,32,0.6992137919620973) 60%, rgba(0,0,0,0) 100%)",
           }}
           animate={
             isMouseOver
@@ -89,7 +84,7 @@ export const RevealText = ({
                 }
           }
           transition={isMouseOver ? { duration: 0 } : { duration: 0.4 }}
-          className="absolute bg-[#1d1c20] z-20  will-change-transform"
+          className="absolute z-20  will-change-transform"
         >
           <div className="flex items-center gap-2 w-full justify-center mx-auto">
             <p
@@ -98,7 +93,7 @@ export const RevealText = ({
               }}
               className=" text-center text-2xl sm:text-4xl py-10 font-bold text-white bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-300"
             >
-              {revealText}
+              I can speak in English
             </p>
             <p
               style={{
@@ -122,7 +117,9 @@ export const RevealText = ({
 
         <div className="overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)] w-full">
           <p className="text-2xl text-center sm:text-4xl py-10 font-bold bg-clip-text text-transparent bg-[#323238]">
-            <span className="text-center">{text}</span>
+            <span className="text-center">{`${
+              window.innerWidth <= 1024 ? "Swipe" : "Hover"
+            } to reveal a secret`}</span>
           </p>
           <MemoizedStars />
         </div>

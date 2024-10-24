@@ -1,7 +1,5 @@
 import About from "../components/sections/About";
 import Blogs from "../components/sections/Blogs";
-import CTA from "../components/sections/Cta";
-import Footer from "../components/sections/Footer";
 import Hero from "../components/sections/Hero";
 import Projects from "../components/sections/Projects";
 import { Skills } from "../components/sections/Skills";
@@ -13,8 +11,6 @@ const Page = () => {
       <Skills />
       <Projects />
       <Blogs />
-      <CTA />
-      <Footer />
     </main>
   );
 };

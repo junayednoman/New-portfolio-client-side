@@ -1,28 +1,30 @@
 "use client";
-import { animate, motion } from "framer-motion";
-import React, { useEffect } from "react";
+import { animate, motion, useInView } from "framer-motion";
+import React, { useEffect, useRef } from "react";
 import { cn } from "../../../lib/utils";
 import Image from "next/image";
 import { projectTechs } from "../../../constants/project.constant";
 import Link from "next/link";
 import { FaLocationArrow } from "react-icons/fa";
-
-export function ProjectCard({ project }) {
-  const { image, title, description, _id, techs } = project || {};
+import { TProject } from "../../../types/project.type";
+export function ProjectCard({ project }: { project: TProject }) {
+  const { thumbnail, title, description, _id, techs, url } = project || {};
   return (
     <Card>
       <div>
-        <Link href={`/projects/${_id}`} target="_blank">
+        <Link href={`/projects/${_id}`}>
           <Image
             className="w-full rounded-[10px] hover:scale-105 duration-300"
-            src={image}
+            src={thumbnail}
             width={300}
             height={300}
             alt="Developer Portfolio"
           />
         </Link>
       </div>
-      <CardTitle className="mt-2">{title}</CardTitle>
+      <CardTitle url={url} className="mt-2">
+        {title}
+      </CardTitle>
       <CardDescription className="pb-20">{description}</CardDescription>
       <CardSkeletonContainer>
         <Skeleton techs={techs} />
@@ -32,6 +34,9 @@ export function ProjectCard({ project }) {
 }
 
 const Skeleton = ({ techs }: { techs: string[] }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   const scale = [1, 1.1, 1];
   const transform = ["translateY(0px)", "translateY(-4px)", "translateY(0px)"];
   const sequence = [
@@ -86,15 +91,21 @@ const Skeleton = ({ techs }: { techs: string[] }) => {
   ];
 
   useEffect(() => {
-    animate(sequence, {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
-      repeat: Infinity,
-      repeatDelay: 1,
-    });
-  }, []);
+    if (isInView) {
+      animate(sequence, {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        repeat: Infinity,
+        repeatDelay: 1,
+      });
+    }
+  }, [isInView]);
+
   return (
-    <div className="p-8 overflow-hidden h-full relative flex items-center justify-center">
+    <div
+      ref={ref}
+      className="p-8 overflow-hidden h-full relative flex items-center justify-center"
+    >
       <div className="flex flex-row flex-shrink-0 justify-between items-center gap-2">
         {techs.map((tech, i) => (
           <Container key={tech} className={`h-12 w-12 circle-${i + 1}`}>
@@ -111,6 +122,7 @@ const Skeleton = ({ techs }: { techs: string[] }) => {
     </div>
   );
 };
+
 const Sparkles = () => {
   const randomMove = () => Math.random() * 2 - 1;
   const randomOpacity = () => Math.random();
@@ -169,9 +181,11 @@ export const Card = ({
 export const CardTitle = ({
   children,
   className,
+  url,
 }: {
   children: React.ReactNode;
   className?: string;
+  url: string;
 }) => {
   return (
     <div className="flex items-center justify-between gap-3">
@@ -183,7 +197,7 @@ export const CardTitle = ({
       >
         {children}
       </h3>
-      <a href="#" target="_blank">
+      <a href={url} target="_blank">
         <span className="inline-block text-white-100 font-medium text-sm">
           Live Site
         </span>

@@ -2,7 +2,7 @@
 import { Button } from "antd";
 import { FrownOutlined } from "@ant-design/icons";
 import { useRouter } from "next/navigation";
-import FContainer from "./components/ui/FContainer";
+import FContainer from "./components/ui/Container";
 
 const ErrorPage = ({
   error,

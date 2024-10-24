@@ -7,7 +7,7 @@ body ::selection {
 }
 body {
   color: #2d2d2d;
-  background: var(--background);
+  background-color: black;
   font-family: var(--font-poppins);
 }
 h1,
@@ -17,16 +17,13 @@ h4,
 h5,
 h6 {
   font-family: var(--font-inter);
-  color: #fff;
 }
 
 p {
-  color: #fff;
   font-weight: 400;
 }
 a {
   text-decoration: none !important;
-  color: #fff;
 }
 
 .FCardShadow {
@@ -228,7 +225,23 @@ a {
 }
 
 .ant-upload.ant-upload-btn {
+  margin-top: -20px;
   padding: 20px;
+  border: 1px dashed #ccc;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+}
+.ant-upload-list-item {
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.-mt-10px {
+  margin-top: -10px !important;
+}
+.ant-upload.ant-upload-btn:hover {
+  border-color: #2d2d2d !important;
 }
 
 .ant-upload.ant-upload-drag {

@@ -1,6 +1,4 @@
-"use client";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import FContainer from "../ui/FContainer";
 import FeatureCard from "../ui/FeatureCard";
 import Image from "next/image";
 import { FaFacebookSquare } from "react-icons/fa";
@@ -16,13 +14,14 @@ import ShinyButton from "../ui/ShinyButton";
 import SectionTitle from "../ui/SectionTitle";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { RevealText } from "../ui/RevealText";
+import Container from "../ui/Container";
 
 const About = () => {
   const firstRow = AllStrengths.slice(0, AllStrengths.length / 2);
   const secondRow = AllStrengths.slice(AllStrengths.length / 2);
   return (
     <section id="about" className="md:pb-20 pb-8 md:pt-0 pt-12 z-10">
-      <FContainer>
+      <Container>
         <div className="">
           <SectionTitle>About me</SectionTitle>
 
@@ -108,17 +107,12 @@ const About = () => {
 
           {/* about me bottom */}
           <div className="mt-7 flex xl:flex-row flex-col items-center lg:gap-8 gap-5 overflow-hidden">
-            <div className="flex xl:w-[520px] w-full items-center justify-center h-[208px] bg-[#1D1C20] border dark:border-neutral-700 rounded-[12px]">
-              <RevealText
-                text={`${
-                  window.innerWidth <= 1024 ? "Swipe" : "Hover"
-                } to reveal a secret`}
-                revealText="I can speak in English"
-              ></RevealText>
+            <div className="flex xl:w-[520px] w-full items-center justify-center h-[208px] border dark:border-neutral-700 rounded-[12px]">
+              <RevealText />
             </div>
             <div className="w-full border dark:border-neutral-700 rounded-[12px] p-8">
               <div>
-                <h5 className="font-semibold sm:text-xl text-lg text-center">
+                <h5 className="font-semibold sm:text-xl text-lg text-center text-white">
                   My Key{" "}
                   <HighLightText>
                     <span className="font-semibold">Strengths</span>
@@ -160,7 +154,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </FContainer>
+      </Container>
     </section>
   );
 };

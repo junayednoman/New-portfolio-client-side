@@ -1,9 +1,9 @@
 import Image from "next/image";
-import FContainer from "../ui/FContainer";
 import SectionTitle from "../ui/SectionTitle";
 import Link from "next/link";
 import { Popover } from "antd";
 import DotBackground from "../ui/DotBackground";
+import Container from "../ui/Container";
 
 const Blogs = () => {
   return (
@@ -19,7 +19,7 @@ const Blogs = () => {
               }}
             />
           </div>
-          <FContainer>
+          <Container>
             <SectionTitle>Written thoughts</SectionTitle>
             <div className="md:mt-16 mt-10 z-10">
               <div className="pb-10 border-b border-b-neutral-700">
@@ -239,7 +239,7 @@ const Blogs = () => {
                 <MagicButton>View More</MagicButton>
               </div> */}
             </div>
-          </FContainer>
+          </Container>
         </div>
       </DotBackground>
     </section>

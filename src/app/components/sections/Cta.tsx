@@ -1,5 +1,5 @@
 import BoxBackground from "../ui/BoxBackground";
-import FContainer from "../ui/FContainer";
+import Container from "../ui/Container";
 import HighLightText from "../ui/HighLightText";
 import MagicButton from "../ui/MagicButton";
 
@@ -8,7 +8,7 @@ const CTA = () => {
     <section>
       <div className="relative">
         <BoxBackground className="md:py-44 py-32 z-50">
-          <FContainer>
+          <Container>
             <div className="text-center">
               <h4 className="md:text-3xl text-2xl text-white font-bold capitalize">
                 Hire The{" "}
@@ -23,7 +23,7 @@ const CTA = () => {
                 <MagicButton className="mt-8">Hire me</MagicButton>
               </div>
             </div>
-          </FContainer>
+          </Container>
         </BoxBackground>
       </div>
     </section>

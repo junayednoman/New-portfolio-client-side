@@ -1,5 +1,4 @@
 "use client";
-
 import React, { forwardRef, useRef } from "react";
 import { cn } from "../../../lib/utils";
 import { AnimatedBeam } from "../ui/BeamSkillTree";
@@ -10,10 +9,9 @@ import nodeIcon from "../../../assets/nodejs-icon-svgrepo-com.svg";
 import mongooseIcon from "../../../assets/mongoose.svg";
 import expressIcon from "../../../assets/express-js.svg";
 import Image from "next/image";
-import FContainer from "../ui/FContainer";
+import FContainer from "../ui/Container";
 import SectionTitle from "../ui/SectionTitle";
 import DotBackground from "../ui/DotBackground";
-
 const Circle = forwardRef<
   HTMLDivElement,
   { className?: string; children?: React.ReactNode }

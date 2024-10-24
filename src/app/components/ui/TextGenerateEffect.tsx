@@ -1,34 +1,39 @@
 "use client";
-import { useEffect } from "react";
-import { motion, stagger, useAnimate } from "framer-motion";
+import { useEffect, useRef } from "react";
+import { motion, stagger, useAnimate, useInView } from "framer-motion";
 import { cn } from "../../../lib/utils";
 
 export const TextGenerateEffect = ({
   words,
   className,
   filter = true,
-  duration = 0.5,
+  duration = 1,
 }: {
   words: string;
   className?: string;
   filter?: boolean;
   duration?: number;
 }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true }); // Trigger only once when in view
   const [scope, animate] = useAnimate();
   const wordsArray = words.split(" ");
+
   useEffect(() => {
-    animate(
-      "span",
-      {
-        opacity: 1,
-        filter: filter ? "blur(0px)" : "none",
-      },
-      {
-        duration: duration ? duration : 1,
-        delay: stagger(0.2),
-      }
-    );
-  }, [scope.current]);
+    if (isInView) {
+      animate(
+        "span",
+        {
+          opacity: 1,
+          filter: filter ? "blur(0px)" : "none",
+        },
+        {
+          duration,
+          delay: stagger(0.2),
+        }
+      );
+    }
+  }, [isInView]); // Run the animation only when the text is in view
 
   const renderWords = () => {
     return (
@@ -53,7 +58,10 @@ export const TextGenerateEffect = ({
   return (
     <div className={cn("font-bold", className)}>
       <div className="mt-4">
-        <div className=" dark:text-white text-black text-2xl leading-snug tracking-wide">
+        <div
+          className="dark:text-white text-black text-2xl leading-snug tracking-wide"
+          ref={ref}
+        >
           {renderWords()}
         </div>
       </div>
