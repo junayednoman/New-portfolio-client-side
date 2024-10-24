@@ -19,8 +19,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Junayed Noman - Full Stack Developer",
-  description: "A Full Stack Web Developer",
+  title: "Junayed Noman - MERN Stack Developer",
+  description: "A MERN Stack Web Developer",
 };
 
 export default function RootLayout({
@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="icon.svg" sizes="any" />
+        <link rel="icon" href="icon.png" sizes="any" />
       </head>
       <Providers>
         <body

@@ -1,6 +1,5 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import FeatureCard from "../ui/FeatureCard";
-import Image from "next/image";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 
@@ -29,15 +28,12 @@ const About = () => {
             <div className="border rounded-[12px] border-neutral-700 sm:p-6 p-5 flex flex-col justify-between">
               <div>
                 <div className="flex gap-3">
-                  <div className="border-[2px] border-neutral-400 rounded-[10px]">
-                    <Image
-                      src="https://junayed-noman.web.app/assets/junayed%20noman-_X6r-cS-.jpg"
-                      alt="me"
-                      width={70}
-                      height={70}
-                      className="rounded-[10px] border-2"
-                    />
-                  </div>
+                  <div
+                    className="border-[2px] w-[70px] h-[70px] border-neutral-400 bg-cover bg-center bg-none rounded-[10px]"
+                    style={{
+                      backgroundImage: `url('https://junayed-noman.web.app/assets/junayed%20noman-_X6r-cS-.jpg')`,
+                    }}
+                  ></div>
                   <div className="text-white py-2">
                     <h5 className="font-semibold text-lg">Junayed Noman</h5>
                     <p className="text-slate-300 mt-2 text-sm">
@@ -75,10 +71,11 @@ const About = () => {
                 <PIcon link="https://github.com/junayednoman">
                   <FaGithub size={20} />
                 </PIcon>
-                <PIcon link="https://www.facebook.com/JunayedNoman.me">
-                  <FaFacebookSquare size={20} />
-                </PIcon>
+
                 <div className="sm:block hidden">
+                  <PIcon link="https://www.facebook.com/JunayedNoman.me">
+                    <FaFacebookSquare size={20} />
+                  </PIcon>
                   <PIcon link="https://twitter.com/junayednoman">
                     <FaSquareXTwitter size={20} />
                   </PIcon>
@@ -106,8 +103,8 @@ const About = () => {
           </div>
 
           {/* about me bottom */}
-          <div className="mt-7 flex xl:flex-row flex-col items-center lg:gap-8 gap-5 overflow-hidden">
-            <div className="flex xl:w-[520px] w-full items-center justify-center h-[208px] border dark:border-neutral-700 rounded-[12px]">
+          <div className="md:mt-7 mt-5 flex xl:flex-row flex-col items-center lg:gap-8 gap-5 overflow-hidden">
+            <div className="flex xl:w-[520px] w-full items-center justify-center sm:h-[208px] h-[150px] border dark:border-neutral-700 rounded-[12px]">
               <RevealText />
             </div>
             <div className="w-full border dark:border-neutral-700 rounded-[12px] p-8">

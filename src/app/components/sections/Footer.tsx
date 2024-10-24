@@ -22,9 +22,11 @@ const Footer = () => {
             <PIcon link="https://www.facebook.com/JunayedNoman.me">
               <FaFacebookSquare size={20} />
             </PIcon>
-            <PIcon link="https://twitter.com/junayednoman">
-              <FaSquareXTwitter size={20} />
-            </PIcon>
+            <div className="sm:block hidden">
+              <PIcon link="https://twitter.com/junayednoman">
+                <FaSquareXTwitter size={20} />
+              </PIcon>
+            </div>
             <a
               href="https://drive.google.com/file/d/1W6xp-K4rSH5h9h5VjhO7coGOzk1SaUKN/view?usp=sharing"
               target="_blank"

@@ -11,10 +11,10 @@ const Hero = () => {
     <section>
       <div className="text-center relative">
         <Spotlight fill="#5a279e" className="right-0 h-full top-0 opacity-10" />
-        <BoxBackground className="xl:py-[230px] md:py-[200px] py-16 ">
+        <BoxBackground className="xl:py-[230px] md:py-[200px] py-12 ">
           <div className="max-w-4xl mx-auto px-3">
             <TextGenerateEffect
-              className="font-bold md:text-[80px] md:leading-[85px] text-5xl text-white tracking-tighter"
+              className="font-bold md:text-[80px] md:leading-[85px] text-[40px] leading-10 text-white tracking-tighter"
               words="Hi, I'm Junayed Noman"
               duration={2}
               filter={false}

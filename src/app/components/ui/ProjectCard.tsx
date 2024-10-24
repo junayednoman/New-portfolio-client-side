@@ -12,7 +12,7 @@ export function ProjectCard({ project }: { project: TProject }) {
   const { thumbnail, title, description, _id, techs, url } = project || {};
   return (
     <Card>
-      <div>
+      <div className="relative">
         <Link href={`/projects/${_id}`}>
           <Image
             className="w-full rounded-[10px] hover:scale-105 duration-300"
@@ -21,6 +21,7 @@ export function ProjectCard({ project }: { project: TProject }) {
             height={300}
             alt="Developer Portfolio"
           />
+          <div className="absolute bg-black/15 inset-0 "></div>
         </Link>
       </div>
       <CardTitle url={url} className="mt-2">
@@ -111,7 +112,7 @@ const Skeleton = ({ techs }: { techs: string[] }) => {
         {techs.map((tech, i) => (
           <Container key={tech} className={`h-12 w-12 circle-${i + 1}`}>
             {/* @ts-ignore */}
-            {projectTechs.tech}
+            {projectTechs[tech]}
           </Container>
         ))}
       </div>

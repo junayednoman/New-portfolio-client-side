@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import { Timeline } from "../ui/Timeline";
-import { BackgroundLines } from "../ui/BackgroundLines";
 import freelancing from "../../../assets/freelancing.jpg";
 import L1Certificate from "../../../assets/L1certificate.png";
 export function Education() {
@@ -182,11 +181,9 @@ export function Education() {
   ];
   return (
     <section className="relative">
-      <BackgroundLines>
-        <div className="md:pb-12 pb-5 max-w-[1150px] mx-auto">
-          <Timeline data={data} />
-        </div>
-      </BackgroundLines>
+      <div className="md:pb-12 pb-5 max-w-[1150px] mx-auto">
+        <Timeline data={data} />
+      </div>
     </section>
   );
 }
