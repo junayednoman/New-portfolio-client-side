@@ -58,7 +58,7 @@ export const FloatingNav = ({
           duration: 0.6,
         }}
         className={cn(
-          "flex max-w-fit fixed md:top-8 top-[87%] inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-[12px] dark:bg-black bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] sm:px-4 px-3 py-2 items-center justify-center sm:space-x-7 space-x-3 pNav",
+          "flex max-w-fit fixed md:top-8 top-[90%] inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-[12px] dark:bg-black bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] sm:px-4 px-3 py-2 items-center justify-center sm:space-x-7 space-x-[10px] pNav",
           className
         )}
       >
@@ -67,7 +67,7 @@ export const FloatingNav = ({
             key={`link=${idx}`}
             href={navItem.link}
             className={cn(
-              "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500 md:p-0 p-[10px] px-3 sm:rounded-none rounded-[4px] sm:bg-transparent bg-[#353535] sm:hover:text-purple sm:hover:bg-transparent hover:bg-purple/60"
+              "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500 md:p-0 p-[10px] px-3 sm:rounded-none rounded-[5px] sm:bg-transparent bg-[#353535] sm:hover:text-purple sm:hover:bg-transparent hover:bg-purple/60"
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
