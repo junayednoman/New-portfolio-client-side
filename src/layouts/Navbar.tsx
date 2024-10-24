@@ -40,7 +40,10 @@ export const FloatingNav = ({
       <motion.div
         initial={{
           opacity: 1,
-          y: window?.innerWidth < 768 ? 100 : -100,
+          y:
+            typeof window !== "undefined" && window?.innerWidth < 768
+              ? 100
+              : -100,
         }}
         animate={{
           y: visible ? 0 : -100,

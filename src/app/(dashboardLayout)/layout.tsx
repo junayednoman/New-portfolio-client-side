@@ -14,11 +14,12 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   const { handleLogout } = useUserContext();
   const [collapsed, setCollapsed] = useState(false);
   useEffect(() => {
-    if (window.innerWidth < 610) {
-      setCollapsed(true);
+    if (typeof window !== "undefined") {
+      if (window.innerWidth < 610) {
+        setCollapsed(true);
+      }
     }
   }, []);
-
   const dropdownItems: MenuProps["items"] = [
     ...(items as ItemType[]),
     {

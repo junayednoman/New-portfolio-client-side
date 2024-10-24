@@ -118,7 +118,9 @@ export const RevealText = ({
         <div className="overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)] w-full">
           <p className="text-2xl text-center sm:text-4xl py-10 font-bold bg-clip-text text-transparent bg-[#323238]">
             <span className="text-center">{`${
-              window.innerWidth <= 1024 ? "Swipe" : "Hover"
+              typeof window !== "undefined" && window.innerWidth <= 1024
+                ? "Swipe"
+                : "Hover"
             } to reveal a secret`}</span>
           </p>
           <MemoizedStars />
