@@ -48,10 +48,10 @@ export function Skills() {
           <FContainer>
             <SectionTitle>Powered by</SectionTitle>
             <div
-              className="relative flex w-full items-center justify-center overflow-hidden rounded-lg bg-background p-10 md:shadow-xl"
+              className="relative flex w-full items-center justify-center overflow-hidden rounded-lg bg-background sm:p-10 p-0 md:shadow-xl sm:mt-0 mt-10"
               ref={containerRef}
             >
-              <div className="flex size-full flex-col max-w-lg items-stretch justify-between gap-10">
+              <div className="flex size-full flex-col max-w-lg items-stretch justify-between sm:gap-10 gap-7">
                 <div className="flex flex-row items-center justify-between">
                   <Circle ref={div1Ref}>
                     <Image

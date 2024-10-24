@@ -17,7 +17,7 @@ const Projects = () => {
   const projects = data?.data?.result || [];
 
   return (
-    <section className="md:py-14 py-8">
+    <section id="projects" className="md:py-14 py-8">
       <Container>
         <SectionTitle>My Works in Code</SectionTitle>
         {projects?.length < 1 || isError ? (

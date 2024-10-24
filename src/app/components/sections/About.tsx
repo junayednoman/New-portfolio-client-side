@@ -23,9 +23,8 @@ const About = () => {
       <Container>
         <div className="">
           <SectionTitle>About me</SectionTitle>
-
           <div className="mt-12 grid lg:grid-cols-2 gap-8">
-            <div className="border rounded-[12px] border-neutral-700 sm:p-6 p-5 flex flex-col justify-between">
+            <div className="border rounded-[12px] border-neutral-700 sm:p-6 p-5 flex flex-col justify-between max-w-full">
               <div>
                 <div className="flex gap-3">
                   <div
@@ -92,9 +91,9 @@ const About = () => {
                 </a>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative max-w-full">
               <GradientShadow className="-left-[350px]" />
-              <div className="grid grid-cols-1 sm:grid-cols-2  relative z-10 max-w-7xl mx-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 relative z-10 max-w-7xl mx-auto">
                 {KeyStrengths.map((feature, index) => (
                   <FeatureCard key={feature.title} {...feature} index={index} />
                 ))}
@@ -103,21 +102,20 @@ const About = () => {
           </div>
 
           {/* about me bottom */}
-          <div className="md:mt-7 mt-5 flex xl:flex-row flex-col items-center lg:gap-8 gap-5 overflow-hidden">
+          <div className="md:mt-7 mt-5 flex xl:flex-row flex-col items-center lg:gap-8 gap-5">
             <div className="flex xl:w-[520px] w-full items-center justify-center sm:h-[208px] h-[150px] border dark:border-neutral-700 rounded-[12px]">
               <RevealText />
             </div>
             <div className="w-full border dark:border-neutral-700 rounded-[12px] p-8">
               <div>
                 <h5 className="font-semibold sm:text-xl text-lg text-center text-white">
-                  My Key{" "}
                   <HighLightText>
-                    <span className="font-semibold">Strengths</span>
+                    <span className="font-semibold">My Strengths</span>
                   </HighLightText>
                 </h5>
               </div>
 
-              <div className="relative flex flex-col items-center justify-center overflow-hidden bg-background md:shadow-xl mt-6 xl:max-w-[700px] max-w-full mx-auto">
+              <div className="relative flex flex-col items-center justify-center overflow-x-hidden bg-background md:shadow-xl mt-6 xl:max-w-[700px] max-w-full mx-auto">
                 <div>
                   <Marquee
                     pauseOnHover

@@ -8,7 +8,7 @@ import { MdGeneratingTokens } from "react-icons/md";
 
 const Hero = () => {
   return (
-    <section>
+    <section id="hero">
       <div className="text-center relative">
         <Spotlight fill="#5a279e" className="right-0 h-full top-0 opacity-10" />
         <BoxBackground className="xl:py-[230px] md:py-[200px] py-12 ">

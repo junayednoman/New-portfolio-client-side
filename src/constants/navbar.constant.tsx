@@ -1,40 +1,33 @@
 import { FaHome } from "react-icons/fa";
 import { VscProject } from "react-icons/vsc";
-import { MdMessage } from "react-icons/md";
 import { BsFillInfoSquareFill } from "react-icons/bs";
-import { MdOutlineSupportAgent } from "react-icons/md";
-import { TfiWrite } from "react-icons/tfi";
+import { ImBlog } from "react-icons/im";
+import { PiStudentFill } from "react-icons/pi";
 
 export const navItems = [
   {
     name: "Home",
-    link: "/",
-    icon: <FaHome size={18} />,
+    link: "https://junayednoman.vercel.app/#hero",
+    icon: <FaHome size={14} />,
   },
   {
     name: "About",
-    link: "#about",
-    icon: <BsFillInfoSquareFill />,
+    link: "https://junayednoman.vercel.app/#about",
+    icon: <BsFillInfoSquareFill size={13} />,
   },
-
+  {
+    name: "Education",
+    link: "https://junayednoman.vercel.app/#education",
+    icon: <PiStudentFill size={14} />,
+  },
   {
     name: "Projects",
-    link: "#projects",
-    icon: <VscProject size={18} />,
-  },
-  {
-    name: "Testimonial",
-    link: "#testimonial",
-    icon: <MdMessage size={19} />,
-  },
-  {
-    name: "Contact",
-    link: "/contact",
-    icon: <MdOutlineSupportAgent size={21} />,
+    link: "https://junayednoman.vercel.app/#projects",
+    icon: <VscProject size={13} />,
   },
   {
     name: "Blogs",
-    link: "/blog",
-    icon: <TfiWrite size={17} />,
+    link: "/blogs",
+    icon: <ImBlog size={14} />,
   },
 ];

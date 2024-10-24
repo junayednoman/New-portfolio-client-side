@@ -180,8 +180,8 @@ export function Education() {
     },
   ];
   return (
-    <section className="relative">
-      <div className="md:pb-12 pb-5 max-w-[1150px] mx-auto">
+    <section id="education" className="relative">
+      <div className="md:pb-12 pb-5 md:pt-0 pt-10 max-w-[1150px] mx-auto">
         <Timeline data={data} />
       </div>
     </section>

@@ -1,23 +1,24 @@
 "use client";
-import SectionTitle from "../ui/SectionTitle";
-import DotBackground from "../ui/DotBackground";
-import Container from "../ui/Container";
+
 import { useHandleQuery } from "../../../hooks/query";
-import BlogCard from "../ui/BlogCard";
 import { TBlog } from "../../../types/blog.type";
-import NodataPurple from "../ui/NodataPurple";
-import PurpleLoading from "../ui/PurpleLoading";
-import MagicButton from "../ui/MagicButton";
+import BlogCard from "../../components/ui/BlogCard";
+import Container from "../../components/ui/Container";
+import DotBackground from "../../components/ui/DotBackground";
+import NodataPurple from "../../components/ui/NodataPurple";
+import PurpleLoading from "../../components/ui/PurpleLoading";
+import SectionTitle from "../../components/ui/SectionTitle";
 
 const Blogs = () => {
   const { data, isError, isLoading } = useHandleQuery("blogs", "/blogs", {
     isDeleted: false,
+    limit: 3,
   });
   const blogs = data?.data?.result || [];
   return (
-    <section>
+    <main>
       <DotBackground>
-        <div className="md:pt-24 pt-16 relative">
+        <div className="md:pt-32 pt-10 relative">
           <div className="relative">
             <div
               className="lg:h-[600px] h-[400px] lg:w-[600px] w-[400px] absolute lg:top-0 top-60 xl:right-40 right-0 z-0"
@@ -28,7 +29,7 @@ const Blogs = () => {
             />
           </div>
           <Container>
-            <SectionTitle>Written thoughts</SectionTitle>
+            <SectionTitle>All Blogs</SectionTitle>
             <div className="md:mt-16 mt-10 z-10">
               {isLoading ? (
                 <PurpleLoading />
@@ -52,14 +53,11 @@ const Blogs = () => {
                   />
                 ))
               )}
-              <div className="mt-10">
-                <MagicButton link="/blogs">View More</MagicButton>
-              </div>
             </div>
           </Container>
         </div>
       </DotBackground>
-    </section>
+    </main>
   );
 };
 

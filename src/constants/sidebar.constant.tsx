@@ -23,7 +23,7 @@ export const menuItems = [
   {
     key: "4",
     icon: <NotebookPen size={16} />,
-    label: <Link href={"/blogs"}>Blogs</Link>,
+    label: <Link href={"/my-blogs"}>Blogs</Link>,
   },
   {
     key: "5",

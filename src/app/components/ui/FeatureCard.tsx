@@ -16,10 +16,16 @@ const FeatureCard = ({
     <div
       className={cn(
         `flex flex-col py-10 relative group/feature dark:border-neutral-700 border 
-        ${index === 0 && "sm:rounded-tl-[10px] rounded-t-[10px]"}
+        ${
+          index === 0 &&
+          "rounded-tl-[10px] sm:rounded-tr-none rounded-tr-[10px]"
+        }
         ${index === 1 && "sm:rounded-tr-[10px]"}
         ${index === 2 && "sm:rounded-bl-[10px]"}
-        ${index === 3 && "sm:rounded-br-[10px] rounded-b-[10px]"}
+        ${
+          index === 3 &&
+          "rounded-br-[10px] sm:rounded-bl-none rounded-bl-[10px]"
+        }
         `
       )}
     >

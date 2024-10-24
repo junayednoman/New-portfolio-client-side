@@ -6,7 +6,7 @@ import Projects from "../components/sections/Projects";
 import { Skills } from "../components/sections/Skills";
 const Page = () => {
   return (
-    <main className="bg-black min-h-screen h-auto flex flex-col w-full">
+    <main className="bg-black min-h-screen overflow-x-hidden h-auto flex flex-col w-full">
       <Hero />
       <About />
       <Skills />
