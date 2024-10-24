@@ -19,7 +19,7 @@ const Projects = () => {
   return (
     <section className="py-14">
       <Container>
-        <SectionTitle>Works in Code</SectionTitle>
+        <SectionTitle>My Works in Code</SectionTitle>
         {projects?.length < 1 || isError ? (
           <NodataPurple />
         ) : (
