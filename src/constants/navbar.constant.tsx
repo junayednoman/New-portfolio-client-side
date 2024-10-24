@@ -27,7 +27,7 @@ export const navItems = [
   },
   {
     name: "Blogs",
-    link: "/blogs",
+    link: "https://junayednoman.vercel.app/#blogs",
     icon: <ImBlog size={14} />,
   },
 ];

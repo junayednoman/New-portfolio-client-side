@@ -5,13 +5,7 @@ import { ThemeProvider } from "../../providers/themeProvider";
 import CTA from "../components/sections/Cta";
 import Footer from "../components/sections/Footer";
 
-const GeneralLayout = ({
-  children,
-}: {
-  children: ReactNode;
-  homeBanner: ReactNode;
-  featuredStory: ReactNode;
-}) => {
+const GeneralLayout = ({ children }: { children: ReactNode }) => {
   return (
     <>
       <ThemeProvider
