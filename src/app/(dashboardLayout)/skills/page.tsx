@@ -29,7 +29,6 @@ const CreateBlog = () => {
   const frontend = data?.data?.frontend || [];
   const backend = data?.data?.backend || [];
   const skills = { frontend, backend };
-  console.log("skills, ", skills);
 
   return (
     <>

@@ -24,7 +24,6 @@ const Projects = () => {
     refetch: refetchProjectData,
   } = useHandleQuery("projects", `/projects`);
 
-  console.log("userIdToBeDeleted, ", projectIdToBeDeleted);
   const projectData = data?.data?.result;
 
   // delete project
@@ -44,7 +43,6 @@ const Projects = () => {
     isDeleted: project.isDeleted,
   }));
 
-  console.log("projectItems, ", projectData);
   const columns = [
     {
       title: "Thumbnail",

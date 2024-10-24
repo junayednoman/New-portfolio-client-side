@@ -64,12 +64,10 @@ const CreateProject = () => {
     []
   );
 
-  const {
-    mutate: createProject,
-    isPending,
-    data,
-  } = usePostWithFormData("create-post", "/projects");
-  console.log("data, ", data);
+  const { mutate: createProject, isPending } = usePostWithFormData(
+    "create-post",
+    "/projects"
+  );
   // handle image uploading
   const handleThumbnailUpload = (file: any) => {
     setThumbnail(file.fileList[0]);
@@ -85,7 +83,6 @@ const CreateProject = () => {
     }
 
     createProject(formData);
-    console.log("data, ", data, thumbnail);
   };
 
   return (

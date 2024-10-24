@@ -12,7 +12,6 @@ const ProjectDetails = async ({
   const id = params?.projectId;
   const data = await handleQuery(`/projects/${id}`);
   const projectData = data?.data as TProject;
-  console.log("projectData, ", projectData);
   if (!projectData) {
     return <PurpleLoading />;
   }

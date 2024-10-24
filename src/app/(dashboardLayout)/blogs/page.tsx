@@ -44,7 +44,6 @@ const Blogs = () => {
     category: blog.category,
   }));
 
-  console.log("blogItems, ", blogData);
   const columns = [
     {
       title: "Thumbnail",

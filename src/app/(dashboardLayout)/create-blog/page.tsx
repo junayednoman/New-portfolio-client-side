@@ -79,7 +79,6 @@ const CreateBlog = () => {
     }
 
     createBlog(formData);
-    console.log("data, ", data, thumbnail);
   };
 
   // handle image uploading

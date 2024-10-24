@@ -13,7 +13,6 @@ const Blogs = () => {
     isDeleted: false,
     limit: 3,
   });
-  console.log("data, ", data);
   const blogs = data?.data?.result || [];
   return (
     <section>

@@ -2,11 +2,8 @@ import { Menu } from "antd";
 import Sider from "antd/es/layout/Sider";
 import Link from "next/link";
 import { menuItems } from "../../../constants/sidebar.constant";
-import { useUserContext } from "../../../context/auth.provider";
 
 const Sidebar = ({ collapsed }: { collapsed: boolean }) => {
-  const { handleLogout } = useUserContext();
-
   return (
     <div>
       <Sider
