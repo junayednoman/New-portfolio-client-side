@@ -8,26 +8,26 @@ export const navItems = [
   {
     name: "Home",
     link: "https://junayednoman.vercel.app/#hero",
-    icon: <FaHome size={14} />,
+    icon: <FaHome size={16} />,
   },
   {
     name: "About",
     link: "https://junayednoman.vercel.app/#about",
-    icon: <BsFillInfoSquareFill size={13} />,
+    icon: <BsFillInfoSquareFill size={15} />,
   },
   {
     name: "Education",
     link: "https://junayednoman.vercel.app/#education",
-    icon: <PiStudentFill size={14} />,
+    icon: <PiStudentFill size={17} />,
   },
   {
     name: "Projects",
     link: "https://junayednoman.vercel.app/#projects",
-    icon: <VscProject size={13} />,
+    icon: <VscProject size={15} />,
   },
   {
     name: "Blogs",
     link: "https://junayednoman.vercel.app/#blogs",
-    icon: <ImBlog size={14} />,
+    icon: <ImBlog size={16} />,
   },
 ];
