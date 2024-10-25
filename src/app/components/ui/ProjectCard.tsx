@@ -24,7 +24,7 @@ export function ProjectCard({ project }: { project: TProject }) {
           <div className="absolute bg-black/15 inset-0 "></div>
         </Link>
       </div>
-      <CardTitle url={url} className="mt-2">
+      <CardTitle id={_id} url={url} className="mt-2">
         {title}
       </CardTitle>
       <CardDescription className="pb-20">{description}</CardDescription>
@@ -185,21 +185,25 @@ export const CardTitle = ({
   children,
   className,
   url,
+  id,
 }: {
   children: React.ReactNode;
   className?: string;
   url: string;
+  id: string;
 }) => {
   return (
     <div className="flex items-center justify-between gap-3">
-      <h3
-        className={cn(
-          "text-lg font-semibold text-gray-800 dark:text-white py-2",
-          className
-        )}
-      >
-        {children}
-      </h3>
+      <Link href={`/projects/${id}`}>
+        <h3
+          className={cn(
+            "text-lg font-semibold text-gray-800 dark:text-white py-2",
+            className
+          )}
+        >
+          {children}
+        </h3>
+      </Link>
       <a href={url} target="_blank">
         <span className="inline-block text-white-100 font-medium text-sm">
           Live Site
