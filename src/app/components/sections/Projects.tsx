@@ -10,6 +10,7 @@ import SectionTitle from "../ui/SectionTitle";
 const Projects = () => {
   const { data, isLoading, isError } = useHandleQuery("projects", "/projects", {
     isDeleted: false,
+    sort: "-updatedAt",
   });
   if (isLoading) {
     return <PurpleLoading />;

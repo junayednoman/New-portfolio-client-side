@@ -32,14 +32,16 @@ const Banner = ({
           >
             Client Side
           </MagicButtonSmall>
-          <MagicButtonSmall
-            target="_blank"
-            icon={<FaGithub size={18} />}
-            iconPosition="left"
-            link={github_server}
-          >
-            Server Side
-          </MagicButtonSmall>
+          {github_server !== "#" && (
+            <MagicButtonSmall
+              target="_blank"
+              icon={<FaGithub size={18} />}
+              iconPosition="left"
+              link={github_server}
+            >
+              Server Side
+            </MagicButtonSmall>
+          )}
           <MagicButtonSmall
             target="_blank"
             icon={<FaArrowUpRightFromSquare size={13} />}

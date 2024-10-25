@@ -15,18 +15,20 @@ import tanstackIcon from "../assets/logos--react-query-icon.svg";
 //   javascript, html, css, tanstack, axios, react-hook, next-, formik,
 
 export const projectTechs = {
-  react: <Image alt="html" src={reactIcon} width={24} height={24} />,
-  redux: <Image alt="html" src={reduxIcon} width={22} height={22} />,
-  typescript: <Image alt="html" src={typescriptIcon} width={21} height={21} />,
-  node: <Image alt="html" src={nodeIcon} width={22} height={22} />,
+  react: <Image alt="react" src={reactIcon} width={24} height={24} />,
+  redux: <Image alt="redux" src={reduxIcon} width={22} height={22} />,
+  typescript: (
+    <Image alt="typescript" src={typescriptIcon} width={21} height={21} />
+  ),
+  node: <Image alt="node" src={nodeIcon} width={22} height={22} />,
   mongoose: <SiMongoose size={27} className="text-white" />,
   express: <SiExpress size={20} className="text-white" />,
-  mongodb: <Image alt="html" src={mongodbIcon} width={32} height={32} />,
-  firebase: <Image alt="html" src={firebaseIcon} width={22} height={22} />,
-  nextjs: <Image alt="html" src={nextIcon} width={22} height={22} />,
+  mongodb: <Image alt="mongodb" src={mongodbIcon} width={32} height={32} />,
+  firebase: <Image alt="firebase" src={firebaseIcon} width={22} height={22} />,
+  nextjs: <Image alt="nextjs" src={nextIcon} width={24} height={24} />,
   tailwind: <Image alt="html" src={tailwindIcon} width={22} height={22} />,
   javascript: <Image alt="html" src={javascriptIcon} width={21} height={21} />,
-  tanstack: <Image alt="html" src={tanstackIcon} width={21} height={21} />,
+  tanstack: <Image alt="html" src={tanstackIcon} width={23} height={23} />,
 };
 
 export const projects = [

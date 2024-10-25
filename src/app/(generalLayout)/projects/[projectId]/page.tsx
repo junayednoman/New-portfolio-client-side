@@ -23,12 +23,7 @@ const ProjectDetails = async ({
         url={projectData?.url}
         image={projectData?.thumbnail}
       />
-      <Content
-        heading={projectData?.title}
-        content={projectData?.content}
-        techs={projectData?.techs}
-        description={projectData?.description}
-      />
+      <Content content={projectData?.content} techs={projectData?.techs} />
     </main>
   );
 };
