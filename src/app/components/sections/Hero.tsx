@@ -26,16 +26,18 @@ const Hero = () => {
               front-end designs to robust back-end systems.
             </p>
             <div className="flex sm:flex-row flex-col items-center gap-4 justify-center mb-2 mt-14">
-              <a href="#projects" className="cursor-default">
-                <MagicButton icon={<FaLocationArrow />}>
-                  View Projects
+              <MagicButton link="#about" icon={<FaLocationArrow />}>
+                Learn More
+              </MagicButton>
+
+              <div className="sm:block hidden">
+                <MagicButton
+                  link="#projects"
+                  icon={<MdGeneratingTokens size={20} />}
+                >
+                  View projects
                 </MagicButton>
-              </a>
-              <a href="#testimonials" className="sm:block hidden">
-                <MagicButton icon={<MdGeneratingTokens size={20} />}>
-                  Testimonials
-                </MagicButton>
-              </a>
+              </div>
             </div>
           </div>
         </BoxBackground>

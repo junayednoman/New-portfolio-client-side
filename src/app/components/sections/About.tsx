@@ -63,18 +63,19 @@ const About = () => {
                   without working on such real-world projects.
                 </p>
               </div>
-              <div className="flex items-center sm:gap-4 gap-2 mt-6">
+              <div className="flex items-center sm:gap-3 gap-2 mt-6">
                 <PIcon link="https://www.linkedin.com/in/junayed-noman/">
                   <FaLinkedin size={20} />
                 </PIcon>
                 <PIcon link="https://github.com/junayednoman">
                   <FaGithub size={20} />
                 </PIcon>
-
                 <div className="sm:block hidden">
                   <PIcon link="https://www.facebook.com/JunayedNoman.me">
                     <FaFacebookSquare size={20} />
                   </PIcon>
+                </div>
+                <div className="sm:block hidden">
                   <PIcon link="https://twitter.com/junayednoman">
                     <FaSquareXTwitter size={20} />
                   </PIcon>

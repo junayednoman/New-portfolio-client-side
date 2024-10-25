@@ -17,7 +17,12 @@ const ProjectDetails = async ({
   }
   return (
     <main className="md:pt-20 bg-black">
-      <Banner image={projectData?.thumbnail} />
+      <Banner
+        github_client={projectData?.github_client}
+        github_server={projectData?.github_server}
+        url={projectData?.url}
+        image={projectData?.thumbnail}
+      />
       <Content
         heading={projectData?.title}
         content={projectData?.content}
