@@ -8,27 +8,27 @@ export const menuItems = [
   {
     key: "1",
     icon: <AiOutlineProject size={16} />,
-    label: <Link href={"/create-project"}>Create Project</Link>,
+    label: <Link href={"/admin/create-project"}>Create Project</Link>,
   },
   {
     key: "2",
     icon: <AiOutlineProject size={16} />,
-    label: <Link href={"/projects"}>Projects</Link>,
+    label: <Link href={"/admin/projects"}>Projects</Link>,
   },
   {
     key: "3",
     icon: <NotebookPen size={16} />,
-    label: <Link href={"/create-blog"}>Create Blog</Link>,
+    label: <Link href={"/admin/create-blog"}>Create Blog</Link>,
   },
   {
     key: "4",
     icon: <NotebookPen size={16} />,
-    label: <Link href={"/my-blogs"}>Blogs</Link>,
+    label: <Link href={"/admin/my-blogs"}>Blogs</Link>,
   },
   {
     key: "5",
     icon: <GiSkills size={16} />,
-    label: <Link href={"/skills"}>Skills</Link>,
+    label: <Link href={"/admin/skills"}>Skills</Link>,
   },
 ];
 
@@ -60,4 +60,4 @@ export const items: MenuProps["items"] = [
   },
 ];
 
-export const protectedRoutes = ["/author", "/admin", "/profile"];
+export const protectedRoutes = ["/admin"];

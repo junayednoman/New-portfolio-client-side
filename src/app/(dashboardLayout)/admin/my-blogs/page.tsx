@@ -1,14 +1,14 @@
 "use client";
 
 import { Popconfirm, Table, Tag } from "antd";
-import { Pencil, Trash2 } from "lucide-react";
+import { Eye, Pencil, Trash2 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-import { useDeleteData } from "../../../hooks/mutation";
-import DashboardSectionTitle from "../../components/dashboard/DashboardSectionTitle";
-import { useHandleQuery } from "../../../hooks/query";
+import { useDeleteData } from "../../../../hooks/mutation";
+import DashboardSectionTitle from "../../../components/dashboard/DashboardSectionTitle";
+import { useHandleQuery } from "../../../../hooks/query";
 import Image from "next/image";
-import { TBlog } from "../../../types/blog.type";
+import { TBlog } from "../../../../types/blog.type";
 
 export type TTableProps = Pick<
   TBlog,
@@ -84,7 +84,18 @@ const Blogs = () => {
         <div className="flex  items-center gap-2">
           <Link
             className={`${isDeleted && "pointer-events-none opacity-50"}`}
-            href={`/edit-blog/${key}`}
+            href={`/blogs/${key}`}
+          >
+            <Tag
+              color="geekblue-inverse"
+              className="flex items-center justify-center p-2 cursor-pointer rounded-[6px]"
+            >
+              <Eye size={17} />
+            </Tag>
+          </Link>
+          <Link
+            className={`${isDeleted && "pointer-events-none opacity-50"}`}
+            href={`/admin/edit-blog/${key}`}
           >
             <Tag
               color="blue-inverse"

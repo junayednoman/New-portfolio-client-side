@@ -1,21 +1,24 @@
-import Link from "next/link";
-
 const MagicButton = ({
   children,
   icon,
   iconPosition = "right",
   className,
-  link = "/",
+  link = "#",
+  type,
+  blank = false,
 }: {
   children: React.ReactNode;
   icon?: React.ReactNode;
   iconPosition?: "left" | "right";
   className?: string;
   link?: string;
+  type?: "button" | "submit" | "reset";
+  blank?: boolean;
 }) => {
   return (
-    <Link href={link}>
+    <a target={`${blank && "_blank"}`} href={link}>
       <button
+        type={type}
         className={`relative inline-flex h-12 overflow-hidden rounded-[12px] p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 ${className}`}
       >
         <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
@@ -27,7 +30,7 @@ const MagicButton = ({
           {iconPosition === "right" && icon}
         </span>
       </button>
-    </Link>
+    </a>
   );
 };
 

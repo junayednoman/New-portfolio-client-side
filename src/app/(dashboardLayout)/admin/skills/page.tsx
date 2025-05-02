@@ -1,14 +1,14 @@
 "use client";
-import PForm from "../../components/form/PForm";
-import PSelect from "../../components/form/PSelect";
-import PButton from "../../components/ui/PButton";
+import PForm from "../../../components/form/PForm";
+import PSelect from "../../../components/form/PSelect";
+import PButton from "../../../components/ui/PButton";
 import { FieldValues, SubmitHandler } from "react-hook-form";
-import DashboardSectionTitle from "../../components/dashboard/DashboardSectionTitle";
-import { techOptions } from "../../../constants/project.constant";
-import { useUpdateData } from "../../../hooks/mutation";
-import { useHandleQuery } from "../../../hooks/query";
-import Loading from "../../components/ui/Loading";
-import NoData from "../../components/ui/NoData";
+import DashboardSectionTitle from "../../../components/dashboard/DashboardSectionTitle";
+import { techOptions } from "../../../../constants/project.constant";
+import { useUpdateData } from "../../../../hooks/mutation";
+import { useHandleQuery } from "../../../../hooks/query";
+import Loading from "../../../components/ui/Loading";
+import NoData from "../../../components/ui/NoData";
 
 const CreateBlog = () => {
   const id = "my-skills";

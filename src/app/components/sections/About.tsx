@@ -30,7 +30,7 @@ const About = () => {
                   <div
                     className="border-[2px] w-[70px] h-[70px] border-neutral-400 bg-cover bg-center bg-none rounded-[10px]"
                     style={{
-                      backgroundImage: `url('https://junayed-noman.web.app/assets/junayed%20noman-_X6r-cS-.jpg')`,
+                      backgroundImage: `url('https://i.ibb.co.com/hXSksZF/464806637-1000091268468332-6036196829907894674-n.jpg')`,
                     }}
                   ></div>
                   <div className="text-white py-2">
@@ -40,28 +40,26 @@ const About = () => {
                     </p>
                   </div>
                 </div>
-                <p className="text-white-100 text-sm leading-[22px] mt-4">
-                  At the end of 2021, I began my journey with HTML and CSS, and
-                  Bootstrap. I freelanced with these skills until June 2023.
-                  During the freelance period, I have worked with{" "}
-                  <span className="text-lavender font-medium">
-                    raw HTML and CSS
-                  </span>{" "}
-                  Then I started learning JavaScript-based front-end and basic
-                  back-end development in July 2023.
-                </p>
-                <p className="text-white-100 text-sm leading-[22px] mt-2">
-                  Afterward, I collaborated on some contractual projects. In
-                  particular, I got an opportunity to develop a ‘data collection
-                  system’ for around{" "}
-                  <span className="text-lavender font-medium">
-                    200 primary schools
-                  </span>{" "}
-                  that won first place in a divisional competition of the
-                  primary education department. That significantly enhanced my
-                  skills. I have learned such knowledge that I couldn’t learn
-                  without working on such real-world projects.
-                </p>
+
+                <div>
+                  <p className="text-white-100 mt-4 text-sm">
+                    After more than a year of learning, I have developed a solid
+                    foundation in the MERN stack and have experience in building
+                    dynamic and scalable applications. In the coming year, my
+                    goal is to master modern technologies such as PostgreSQL,
+                    Prisma, GraphQL, Docker, and AWS to create secure,
+                    efficient, and future- proof solutions that address
+                    real-world challenges. I aim to build a strong foundation
+                    and increase my versatility by exploring these technologies.
+                  </p>
+                  <p className="text-white-100 mt-3 text-sm">
+                    Furthermore, I’ll be learning new technologies to stay
+                    aligned with the industry trends and demand. Ultimately, I
+                    aspire to become a senior software developer with a
+                    comprehensive skill set and the confidence to lead projects
+                    effectively after 2-4 years.
+                  </p>
+                </div>
               </div>
               <div className="flex items-center sm:gap-3 gap-2 mt-6">
                 <PIcon link="https://www.linkedin.com/in/junayed-noman/">
@@ -80,16 +78,14 @@ const About = () => {
                     <FaSquareXTwitter size={20} />
                   </PIcon>
                 </div>
-                <a
-                  href="https://drive.google.com/file/d/1W6xp-K4rSH5h9h5VjhO7coGOzk1SaUKN/view?usp=sharing"
+
+                <MagicButtonSmall
+                  link="https://drive.google.com/file/d/1S_J4ttPQRdtIUczV5XemRLk-00zE9352/view?usp=sharing"
                   target="_blank"
+                  icon={<FaArrowUpRightFromSquare size={13} />}
                 >
-                  <MagicButtonSmall
-                    icon={<FaArrowUpRightFromSquare size={13} />}
-                  >
-                    View Resume
-                  </MagicButtonSmall>
-                </a>
+                  View Resume
+                </MagicButtonSmall>
               </div>
             </div>
             <div className="relative max-w-full">
@@ -122,9 +118,9 @@ const About = () => {
                     pauseOnHover
                     className="lg:[--duration:70s] md:[--duration:95s] [--duration:125s] [--gap:8px]"
                   >
-                    {firstRow.map((item) => (
+                    {firstRow.map((item, i) => (
                       <div
-                        key={item.title}
+                        key={i}
                         className="flex p-2 rounded-[10px] border border-neutral-700"
                       >
                         <ShinyButton icon={item.icon}>{item.title}</ShinyButton>
@@ -136,9 +132,9 @@ const About = () => {
                     pauseOnHover
                     className="lg:[--duration:70s] md:[--duration:95s] [--duration:125s] [--gap:8px]"
                   >
-                    {secondRow.map((item) => (
+                    {secondRow.map((item, i) => (
                       <div
-                        key={item.title}
+                        key={i}
                         className="flex p-2 rounded-[10px] border border-neutral-700"
                       >
                         <ShinyButton icon={item.icon}>{item.title}</ShinyButton>

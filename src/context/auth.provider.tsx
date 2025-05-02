@@ -16,6 +16,7 @@ import { protectedRoutes } from "../constants/sidebar.constant";
 export const UserContext = createContext<TUserProviderValues | undefined>(
   undefined
 );
+
 type TDecodeUser = Pick<TUser, "_id" | "name" | "email" | "role">;
 
 type TUserProviderValues = {
@@ -49,7 +50,7 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
 
     toast.success("Log out success!");
     if (protectedRoutes.some((route) => pathname.match(route))) {
-      return router.push(`/auth/login?redirect=${pathname}`);
+      return router.push(`/login?redirect=${pathname}`);
     }
   };
 

@@ -19,7 +19,7 @@ export function ProjectCard({ project }: { project: TProject }) {
             src={thumbnail}
             width={300}
             height={300}
-            alt="Developer Portfolio"
+            alt={title}
           />
           <div className="absolute bg-black/15 inset-0 "></div>
         </Link>

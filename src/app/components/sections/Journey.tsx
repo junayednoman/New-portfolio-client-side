@@ -1,65 +1,25 @@
-import Image from "next/image";
 import React from "react";
 import { Timeline } from "../ui/Timeline";
-import freelancing from "../../../assets/freelancing.jpg";
-import L1Certificate from "../../../assets/L1certificate.png";
-export function Education() {
+export function Journey() {
   const data = [
     {
       title: "2021",
       content: (
         <div className="md:mt-0 mt-2">
-          <div>
-            <h5 className="text-white-100 font-semibold md:text-2xl text-xl">
-              Secondary School Certificate (SSC)
-            </h5>
-            <p className="mt-2 text-neutral-200 leading-6">
-              I have Completed my Secondary School Certificate (SSC) from the
-              science group in 2021. Though I was not a very serious student I
-              loved Physics more than others.
-            </p>
-          </div>
-          <div className="mt-7">
-            <h5 className="text-white-100 font-semibold md:text-2xl text-xl">
-              Learning HTML & CSS
-            </h5>
-            <p className="mt-2 text-neutral-200 leading-6">
-              At the end of 2021 I started my web development journey. I started
-              learning HTML and CSS, building static websites, and exploring the
-              fundamentals of web design. This phase introduced me to the world
-              of front-end development, shaping my interest in crafting visually
-              appealing, user-friendly interfaces.
-            </p>
-          </div>
+          <h5 className="text-white-100 font-semibold md:text-2xl text-xl">
+            Learning HTML & CSS
+          </h5>
+          <p className="mt-2 text-neutral-200 leading-6">
+            At the end of 2021 I started my web development journey. I started
+            learning HTML and CSS, building static websites, and exploring the
+            fundamentals of web design. This phase introduced me to the world of
+            front-end development, shaping my interest in crafting visually
+            appealing, user-friendly interfaces.
+          </p>
         </div>
       ),
     },
-    {
-      title: "2022",
-      content: (
-        <div className="md:mt-0 mt-2">
-          <div>
-            <h5 className="text-white-100 font-semibold md:text-2xl text-xl">
-              Starting freelancing
-            </h5>
-            <p className="mt-2 text-neutral-200 leading-6">
-              In the mid of 2022, I began my freelancing career, applying my
-              skills in HTML, CSS, and Bootstrap to real-world projects. During
-              this period, I worked with clients, building responsive websites
-              and gaining hands-on experience in managing client requirements,
-              timelines, and project delivery.
-            </p>
-            <Image
-              className="rounded-[12px] mt-4"
-              src={freelancing}
-              alt="html css"
-              width={800}
-              height={300}
-            />
-          </div>
-        </div>
-      ),
-    },
+
     {
       title: "2023",
       content: (
@@ -92,23 +52,12 @@ export function Education() {
               that won first place in a divisional competition by the primary
               education department.
             </p>
-            <div className="relative mt-4">
-              <Image
-                className="rounded-[10px]"
-                src={L1Certificate}
-                alt="html css"
-                width={900}
-                height={100}
-              />
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black bg-opacity-20 rounded-[10px]"></div>
-            </div>
           </div>
           <div className="mt-7">
             <h5 className="text-white-100 font-semibold md:text-2xl text-xl">
               Dropping Out of College
             </h5>
-            <p className="mt-2 text-neutral-200 leading-6">
+            <div className="mt-2 text-neutral-200 leading-6">
               In August 2023, I made the challenging decision to drop out of
               college at the end the 2nd year. But why?
               <div className="pl-4 mt-4 space-y-3">
@@ -120,7 +69,7 @@ export function Education() {
                   succeed. Love to be crazy . I don't consider the existing
                   system as constant. Instead, I wanna go beyond that. "No one
                   has ever changed the world by doing what the world has told
-                  them to do."-Eddy Zhong
+                  them to do." -Eddy Zhong
                 </p>
                 <p className=" text-neutral-200">
                   <span className="font-medium">
@@ -132,7 +81,7 @@ export function Education() {
                   by focusing on developing industry standard skills.
                 </p>
               </div>
-            </p>
+            </div>
           </div>
         </div>
       ),
@@ -142,21 +91,6 @@ export function Education() {
       content: (
         <div className="md:mt-0 mt-2">
           <div>
-            <h5 className="text-white-100 font-semibold md:text-2xl text-xl">
-              Improving English Communication
-            </h5>
-            <p className="mt-2 text-neutral-200 leading-6">
-              I successfully completed a comprehensive 3-month offline course at
-              <span className="font-semibold">English Therapy</span>, where I
-              focused on refining my spoken English skills. The course
-              emphasized improving fluency, pronunciation, and confidence in
-              real-life conversations. Through interactive sessions and
-              practical exercises, I developed a stronger command of the
-              language, enabling me to communicate more effectively in both
-              personal and professional settings.
-            </p>
-          </div>
-          <div className="mt-7">
             <h5 className="text-white-100 font-semibold md:text-2xl text-xl">
               Diving Deep into MERN Stack
             </h5>
@@ -178,9 +112,33 @@ export function Education() {
         </div>
       ),
     },
+    {
+      title: "2025",
+      content: (
+        <div className="md:mt-0 mt-2">
+          <div>
+            <h5 className="text-white-100 font-semibold md:text-2xl text-xl">
+              Starting professional career
+            </h5>
+            <p className="mt-2 text-neutral-200 leading-6">
+              In December 2024, I joined 'Spark Tech' as a Junior Full Stack
+              Developer. While my designation is full-stack, my focus is
+              primarily on backend development. I am responsible for designing
+              and developing APIs and seamlessly integrating them with the
+              frontend.
+            </p>
+            <p className="mt-2 text-neutral-200 leading-6">
+              In 2025, I aim to level up my skills in PostgreSQL, Prisma ORM, and dive into GraphQL. I also plan to
+              explore Docker and AWS to take my backend development to the next
+              level.
+            </p>
+          </div>
+        </div>
+      ),
+    },
   ];
   return (
-    <section id="education" className="relative">
+    <section id="journey" className="relative">
       <div className="md:pb-12 pb-5 md:pt-0 pt-10 max-w-[1150px] mx-auto">
         <Timeline data={data} />
       </div>

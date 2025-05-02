@@ -4,7 +4,7 @@ import { cn } from "../../../lib/utils";
 import { AnimatedBeam } from "../ui/BeamSkillTree";
 import typescriptIcon from "../../../assets/typescript-svgrepo-com.svg";
 import reactIcon from "../../../assets/react.svg";
-import reduxIcon from "../../../assets/redux-svgrepo-com.svg";
+import nextIcon from "../../../assets/nextjs-icon.svg";
 import nodeIcon from "../../../assets/nodejs-icon-svgrepo-com.svg";
 import mongooseIcon from "../../../assets/mongoose.svg";
 import expressIcon from "../../../assets/express-js.svg";
@@ -42,7 +42,7 @@ export function Skills() {
   const div7Ref = useRef<HTMLDivElement>(null);
 
   return (
-    <section className="relative">
+    <section id="skills" className="relative">
       <DotBackground>
         <div className="md:pt-16 pb-10 pt-14 relative">
           <FContainer>
@@ -64,28 +64,28 @@ export function Skills() {
                   </Circle>
                   <Circle ref={div5Ref}>
                     <Image
-                      className="pointer-events-none"
-                      src={nodeIcon}
-                      alt="node js"
-                      width={20}
-                      height={20}
-                    />
+                    className="pointer-events-none"
+                    src={nodeIcon}
+                    alt="node js"
+                    width={20}
+                    height={20}
+                  />
                   </Circle>
                 </div>
                 <div className="flex flex-row items-center justify-between">
                   <Circle ref={div2Ref}>
                     <Image
                       className="pointer-events-none"
-                      src={reactIcon}
-                      alt="react"
-                      width={30}
-                      height={30}
+                      src={expressIcon}
+                      alt="express"
+                      width={19}
+                      height={19}
                     />
                   </Circle>
                   <Circle ref={div4Ref} className="size-16">
                     <Image
                       src={
-                        "https://junayed-noman.web.app/assets/junayed%20noman-_X6r-cS-.jpg"
+                        "https://i.ibb.co.com/hXSksZF/464806637-1000091268468332-6036196829907894674-n.jpg"
                       }
                       className="rounded-full pointer-events-none"
                       alt="junayed noman"
@@ -94,6 +94,17 @@ export function Skills() {
                     />
                   </Circle>
                   <Circle ref={div6Ref}>
+                  <Image
+                      className="pointer-events-none"
+                      src={reactIcon}
+                      alt="react"
+                      width={30}
+                      height={30}
+                    /> 
+                  </Circle>
+                </div>
+                <div className="flex flex-row items-center justify-between">
+                  <Circle ref={div3Ref}>
                     <Image
                       className="w-[50px] pointer-events-none"
                       src={mongooseIcon}
@@ -102,24 +113,13 @@ export function Skills() {
                       height={50}
                     />
                   </Circle>
-                </div>
-                <div className="flex flex-row items-center justify-between">
-                  <Circle ref={div3Ref}>
-                    <Image
-                      className="pointer-events-none"
-                      src={reduxIcon}
-                      alt="redux"
-                      width={21}
-                      height={21}
-                    />
-                  </Circle>
                   <Circle ref={div7Ref}>
                     <Image
                       className="pointer-events-none"
-                      src={expressIcon}
-                      alt="express"
-                      width={19}
-                      height={19}
+                      src={nextIcon}
+                      alt="redux"
+                      width={21}
+                      height={21}
                     />
                   </Circle>
                 </div>

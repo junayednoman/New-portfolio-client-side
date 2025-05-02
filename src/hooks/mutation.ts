@@ -2,6 +2,21 @@ import { handleDelete, handlePatch, handlePost, handlePostFormData, handleUpdate
 import { useMutation } from "@tanstack/react-query";
 import { FieldValues } from "react-hook-form";
 import { toast } from "sonner";
+import { handleAuthMutation } from "../services/auth";
+
+export const useAuthMutation = (key: string, url: string) => {
+  return useMutation({
+    mutationKey: [key],
+    mutationFn: async (payload: FieldValues) => await handleAuthMutation(url, payload),
+    onSuccess: (data) => {
+      toast.success(data.message || "Mutation Successful");
+    },
+    onError: (error) => {
+      toast.error(error.message || "Something went wrong");
+    }
+  })
+};
+
 
 export const usePostWithFormData = (key: string, url: string) => {
   return useMutation({

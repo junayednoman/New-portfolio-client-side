@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { TBlog } from "../../../types/blog.type";
 import moment from "moment";
+import myImg from "../../../assets/junayed noman1.png";
 
 const BlogCard = ({ blog, className }: { blog: TBlog; className?: string }) => {
   const { _id, title, thumbnail, description, tags, createdAt } = blog || {};
@@ -11,11 +12,11 @@ const BlogCard = ({ blog, className }: { blog: TBlog; className?: string }) => {
       <div className="flex gap-3 items-center">
         <div className="border-[2px] border-purple rounded-full">
           <Image
-            src="https://junayed-noman.web.app/assets/junayed%20noman-_X6r-cS-.jpg"
+            src={myImg}
             width={50}
             height={50}
             className="rounded-full"
-            alt="Junamed noman"
+            alt="junayed noman"
           />
         </div>
         <div>

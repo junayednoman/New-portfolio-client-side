@@ -1,30 +1,35 @@
 "use client";
-import PForm from "../../../components/form/PForm";
-import PInput from "../../../components/form/PInput";
-import PSelect from "../../../components/form/PSelect";
-import PTextArea from "../../../components/form/PTextArea";
-import PUploading from "../../../components/form/PUploading";
-import PButton from "../../../components/ui/PButton";
+import PForm from "../../../../components/form/PForm";
+import PInput from "../../../../components/form/PInput";
+import PSelect from "../../../../components/form/PSelect";
+import PTextArea from "../../../../components/form/PTextArea";
+import PUploading from "../../../../components/form/PUploading";
+import PButton from "../../../../components/ui/PButton";
 import { FieldValues, SubmitHandler } from "react-hook-form";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { techOptions } from "../../../../constants/project.constant";
+import { techOptions } from "../../../../../constants/project.constant";
 import { IJoditEditorProps } from "jodit-react";
 import dynamic from "next/dynamic";
+import { projectValidationSchema } from "../../../../../validaiton/project.validation";
 const JoditEditor = dynamic(() => import("jodit-react"), { ssr: false });
-import DashboardSectionTitle from "../../../components/dashboard/DashboardSectionTitle";
-import { useUpdateWithFormData } from "../../../../hooks/mutation";
-import { useHandleQuery } from "../../../../hooks/query";
-import Loading from "../../../components/ui/Loading";
-import { categoryOptions } from "../../../../constants/blog.constant";
-import NoData from "../../../components/ui/NoData";
+import { zodResolver } from "@hookform/resolvers/zod";
+import DashboardSectionTitle from "../../../../components/dashboard/DashboardSectionTitle";
+import { useUpdateWithFormData } from "../../../../../hooks/mutation";
+import { useHandleQuery } from "../../../../../hooks/query";
+import Loading from "../../../../components/ui/Loading";
+import NoData from "../../../../components/ui/NoData";
 
-const EditBlog = ({ params }: { params: { blogId: string } }) => {
+const EditProject = ({ params }: { params: { projectId: string } }) => {
   const {
-    data: blogData,
+    data: projectData,
     isFetching,
     isError,
-    refetch: refetchBlogData,
-  } = useHandleQuery("get-blog", `/blogs/${params.blogId}`);
+    refetch: refetchProjectData,
+  } = useHandleQuery("get-project", `/projects/${params.projectId}`);
+
+  useEffect(() => {
+    refetchProjectData();
+  }, [params.projectId, refetchProjectData]);
 
   const [content, setContent] = useState<string>("");
   const [thumbnail, setThumbnail] = useState<any | undefined>(undefined);
@@ -72,74 +77,73 @@ const EditBlog = ({ params }: { params: { blogId: string } }) => {
     []
   );
 
-  useEffect(() => {
-    refetchBlogData();
-  }, [params.blogId, refetchBlogData]);
-
-  // update blog
-  const { mutateAsync: updateBlog, isPending: isUpdatePending } =
-    useUpdateWithFormData("update-blog", `/blogs/${params.blogId}`);
+  // update project
+  const { mutateAsync: updateProject, isPending: isUpdatePending } =
+    useUpdateWithFormData("update-project", `/projects/${params.projectId}`);
 
   // handle image uploading
   const handleThumbnailUpload = (file: any) => {
     setThumbnail(file.fileList[0]);
   };
 
-  const handleUpdateBlog: SubmitHandler<FieldValues> = async (data) => {
+  const handleUpdateProject: SubmitHandler<FieldValues> = async (data) => {
     const formData = new FormData();
     data.content = content;
     formData.append("data", JSON.stringify(data));
     if (thumbnail) {
       formData.append("thumbnail", thumbnail?.originFileObj);
     }
-    await updateBlog(formData);
-    refetchBlogData();
+    await updateProject(formData);
+    refetchProjectData();
   };
 
-  const blog = blogData?.data;
+  const project = projectData?.data;
   useEffect(() => {
-    if (blog) {
-      setContent(blog?.content || "");
+    if (project) {
+      setContent(project?.content || "");
     }
-  }, [blog]);
+  }, [project]);
 
   if (isFetching) {
     return <Loading className="h-[70vh]" />;
   }
 
   const defaultValues = {
-    title: blog?.title,
-    description: blog?.description,
-    category: blog?.category,
-    tags: blog?.tags,
-    content: blog?.content,
+    title: project?.title,
+    description: project?.description,
+    url: project?.url,
+    github_client: project?.github_client,
+    github_server: project?.github_server,
+    techs: project?.techs,
+    content: project?.content,
   };
   const defaultThumbnailList = [
     {
       uid: "1",
-      name: blog?.title,
+      name: project?.title,
       status: "done",
-      url: blog?.thumbnail,
+      url: project?.thumbnail,
     },
   ];
 
   return (
     <>
-      <DashboardSectionTitle heading="Edit Blog" />
-      {!blog || isError ? (
+      <DashboardSectionTitle heading="Edit Project" />
+      {!project || isError ? (
         <NoData />
       ) : (
         <div className="flex justify-between gap-8 mt-8">
           <div>
             <PForm
               defaultValues={defaultValues}
-              handleFormSubmit={handleUpdateBlog}
+              resolver={zodResolver(projectValidationSchema)}
+              handleFormSubmit={handleUpdateProject}
             >
               <div className="space-y-2 w-[600px]">
                 <PInput
                   name="title"
                   label="Title"
-                  placeholder="Enter blog title"
+                  placeholder="Enter project title"
                 />
                 <PUploading
                   defaultFileList={defaultThumbnailList}
@@ -150,21 +154,29 @@ const EditBlog = ({ params }: { params: { blogId: string } }) => {
                   <PTextArea
                     name="description"
                     label="Description"
-                    placeholder="Enter blog description"
+                    placeholder="Enter project description"
                   />
                 </div>
-
-                <PSelect
-                  options={categoryOptions}
-                  name="category"
-                  label="Category"
-                  placeholder="Select a category"
+                <PInput
+                  name="url"
+                  label="Url"
+                  placeholder="Enter project url"
+                />
+                <PInput
+                  name="github_client"
+                  label="Client Side Github"
+                  placeholder="Enter github url"
+                />
+                <PInput
+                  name="github_server"
+                  label="Server Side Github"
+                  placeholder="Enter github url"
                 />
                 <PSelect
                   options={techOptions}
-                  name="tags"
-                  label="Tags"
-                  placeholder="Select tags"
+                  name="techs"
+                  label="Technologies"
+                  placeholder="Select project technologies"
                   mode="multiple"
                 />
                 <PButton disabled={isUpdatePending} htmlType="submit">
@@ -193,4 +205,4 @@ const EditBlog = ({ params }: { params: { blogId: string } }) => {
   );
 };
 
-export default EditBlog;
+export default EditProject;

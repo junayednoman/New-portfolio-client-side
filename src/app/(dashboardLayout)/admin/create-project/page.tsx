@@ -1,20 +1,20 @@
 "use client";
-import PForm from "../../components/form/PForm";
-import PInput from "../../components/form/PInput";
-import PSelect from "../../components/form/PSelect";
-import PTextArea from "../../components/form/PTextArea";
-import PUploading from "../../components/form/PUploading";
-import PButton from "../../components/ui/PButton";
+import PForm from "../../../components/form/PForm";
+import PInput from "../../../components/form/PInput";
+import PSelect from "../../../components/form/PSelect";
+import PTextArea from "../../../components/form/PTextArea";
+import PUploading from "../../../components/form/PUploading";
+import PButton from "../../../components/ui/PButton";
 import { FieldValues, SubmitHandler } from "react-hook-form";
 import { useMemo, useRef, useState } from "react";
-import { techOptions } from "../../../constants/project.constant";
+import { techOptions } from "../../../../constants/project.constant";
 import { IJoditEditorProps } from "jodit-react";
 import dynamic from "next/dynamic";
-import { projectValidationSchema } from "../../../validaiton/project.validation";
+import { projectValidationSchema } from "../../../../validaiton/project.validation";
 const JoditEditor = dynamic(() => import("jodit-react"), { ssr: false });
 import { zodResolver } from "@hookform/resolvers/zod";
-import DashboardSectionTitle from "../../components/dashboard/DashboardSectionTitle";
-import { usePostWithFormData } from "../../../hooks/mutation";
+import DashboardSectionTitle from "../../../components/dashboard/DashboardSectionTitle";
+import { usePostWithFormData } from "../../../../hooks/mutation";
 
 const CreateProject = () => {
   const [content, setContent] = useState<string>("");

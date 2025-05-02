@@ -20,10 +20,9 @@ const Hero = () => {
               filter={false}
             />
             <p className="sm:mt-10 mt-5  text-white sm:text-lg text-[15px] sm:leading-7 leading-6">
-              A MERN Stack Developer with expertise in{" "}
-              <HighLightText>Typescript & NextJs</HighLightText> , building
-              secure and impactful web applications. My work spans from
-              front-end designs to robust back-end systems.
+              Full Stack Developer — mainly working on the backend with
+              <HighLightText> TypeScript, Express.js, Mongoose</HighLightText> &
+              MongoDB to build secure and scalable systems.
             </p>
             <div className="flex sm:flex-row flex-col items-center gap-4 justify-center mb-2 mt-14">
               <MagicButton link="#about" icon={<FaLocationArrow />}>

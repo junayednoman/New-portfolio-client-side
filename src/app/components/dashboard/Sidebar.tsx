@@ -2,8 +2,11 @@ import { Menu } from "antd";
 import Sider from "antd/es/layout/Sider";
 import Link from "next/link";
 import { menuItems } from "../../../constants/sidebar.constant";
+import { LogOut } from "lucide-react";
+import { useUserContext } from "../../../context/auth.provider";
 
 const Sidebar = ({ collapsed }: { collapsed: boolean }) => {
+  const { handleLogout } = useUserContext();
   return (
     <div>
       <Sider
@@ -20,7 +23,7 @@ const Sidebar = ({ collapsed }: { collapsed: boolean }) => {
         collapsed={collapsed}
       >
         <div className="p-4">
-          <Link href={`/profile`} className="inline-block">
+          <Link href={`/admin/projects`} className="inline-block">
             <h3
               className={`${
                 collapsed ? "text-base" : "text-[22px]"
@@ -36,7 +39,7 @@ const Sidebar = ({ collapsed }: { collapsed: boolean }) => {
           defaultSelectedKeys={["1"]}
           items={menuItems}
         />
-        {/* <Divider className="pt-2 mt-2" />
+        <div className="mt-2 bg-gray-200 w-full h-[1px]" />
         <Menu
           className="bg-white px-3 logoutItem"
           mode="inline"
@@ -48,7 +51,7 @@ const Sidebar = ({ collapsed }: { collapsed: boolean }) => {
               label: <span className="text-red-600">Logout</span>,
             },
           ]}
-        /> */}
+        />
       </Sider>
     </div>
   );

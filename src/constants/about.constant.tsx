@@ -71,10 +71,11 @@ export const KeyStrengths = [
     icon: <GoPackage size={22} />,
   },
   {
-    title: "Responsive Design",
+    title: "English Proficiency",
     description:
-      "Skilled in creating mobile-first, responsive designs that look great on any device.",
-    icon: <MdDevices size={22} />,
+      "I have strong English communication skills, both written and verbal.",
+    // "Skilled in creating mobile-first, responsive designs that look great on any device.",
+    icon: <RiEnglishInput size={22} />,
   },
   {
     title: "Modern Front-End Skills",

@@ -34,16 +34,20 @@ const PInput = ({
             <div className="w-full">
               <Form.Item
                 htmlFor={name}
-                label={label}
                 className="mb-3 font-semibold text-text"
               >
+                {label && (
+                  <label className="dark:text-white-100" htmlFor={name}>
+                    {label}
+                  </label>
+                )}
                 <Input
                   {...field}
                   id={name}
                   type={type}
                   placeholder={placeholder}
                   disabled={disabled}
-                  className="block font-normal rounded-[5px] dark:bg-primaryColor dark:border-gray-500 focus:border-text focus:shadow-none hover:border-text text-primaryColor dark:text-gray-300 hover:dark:bg-primaryColor hover:dark:border-gray-300 focus:dark:bg-primaryColor focus:dark:border-gray-300 placeholder:dark:text-gray-400 border border-slate-300 py-2 px-4"
+                  className="block font-normal rounded-[5px] dark:bg-text dark:border-gray-500 focus:border-text focus:shadow-none hover:border-text text-text dark:text-white-100 hover:dark:bg-text hover:dark:border-[#BEC1DD] focus:dark:bg-text focus:dark:border-[#BEC1DD] placeholder:dark:text-gray-400 border border-slate-300 py-2 px-4 mt-1"
                   size="large"
                 />
                 {error && (

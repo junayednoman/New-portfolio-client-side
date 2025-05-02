@@ -93,7 +93,7 @@ export const RevealText = ({
               }}
               className=" text-center text-2xl sm:text-4xl py-10 font-bold text-white bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-300"
             >
-              I can speak in English
+             I'm Fluent in English
             </p>
             <p
               style={{

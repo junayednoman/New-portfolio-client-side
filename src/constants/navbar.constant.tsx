@@ -3,6 +3,7 @@ import { VscProject } from "react-icons/vsc";
 import { BsFillInfoSquareFill } from "react-icons/bs";
 import { ImBlog } from "react-icons/im";
 import { PiStudentFill } from "react-icons/pi";
+import { GiSkills } from "react-icons/gi";
 
 export const navItems = [
   {
@@ -16,9 +17,14 @@ export const navItems = [
     icon: <BsFillInfoSquareFill size={15} />,
   },
   {
-    name: "Education",
-    link: "https://junayednoman.vercel.app/#education",
-    icon: <PiStudentFill size={17} />,
+    name: "Skills",
+    link: "https://junayednoman.vercel.app/#skills",
+    icon: <GiSkills size={15} />,
+  },
+  {
+    name: "Journey",
+    link: "https://junayednoman.vercel.app/#journey",
+    icon: <PiStudentFill size={16} />,
   },
   {
     name: "Projects",
@@ -28,6 +34,6 @@ export const navItems = [
   {
     name: "Blogs",
     link: "https://junayednoman.vercel.app/#blogs",
-    icon: <ImBlog size={16} />,
+    icon: <ImBlog size={15} />,
   },
 ];

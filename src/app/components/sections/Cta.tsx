@@ -20,7 +20,13 @@ const CTA = () => {
                 make it happen.
               </p>
               <div className="relative">
-                <MagicButton className="mt-8">Hire me</MagicButton>
+                <MagicButton
+                  blank
+                  link="https://www.linkedin.com/in/junayed-noman/"
+                  className="mt-8"
+                >
+                  Hire me
+                </MagicButton>
               </div>
             </div>
           </Container>
