@@ -3,11 +3,11 @@ import React, { forwardRef, useRef } from "react";
 import { cn } from "../../../lib/utils";
 import { AnimatedBeam } from "../ui/BeamSkillTree";
 import typescriptIcon from "../../../assets/typescript-svgrepo-com.svg";
-import reactIcon from "../../../assets/react.svg";
-import nextIcon from "../../../assets/nextjs-icon.svg";
-import nodeIcon from "../../../assets/nodejs-icon-svgrepo-com.svg";
+import awsIcon from "../../../assets/aws.svg";
 import mongooseIcon from "../../../assets/mongoose.svg";
+import postgresqlIcon from "../../../assets/postgresql.svg";
 import expressIcon from "../../../assets/express-js.svg";
+import prismaIcon from "../../../assets/prisma.svg";
 import Image from "next/image";
 import FContainer from "../ui/Container";
 import SectionTitle from "../ui/SectionTitle";
@@ -64,22 +64,22 @@ export function Skills() {
                   </Circle>
                   <Circle ref={div5Ref}>
                     <Image
-                    className="pointer-events-none"
-                    src={nodeIcon}
-                    alt="node js"
-                    width={20}
-                    height={20}
-                  />
+                      className="pointer-events-none"
+                      src={prismaIcon}
+                      alt="prisma"
+                      width={20}
+                      height={20}
+                    />
                   </Circle>
                 </div>
                 <div className="flex flex-row items-center justify-between">
                   <Circle ref={div2Ref}>
                     <Image
                       className="pointer-events-none"
-                      src={expressIcon}
-                      alt="express"
-                      width={19}
-                      height={19}
+                      src={postgresqlIcon}
+                      alt="postgresql"
+                      width={20}
+                      height={20}
                     />
                   </Circle>
                   <Circle ref={div4Ref} className="size-16">
@@ -94,32 +94,32 @@ export function Skills() {
                     />
                   </Circle>
                   <Circle ref={div6Ref}>
-                  <Image
+                    <Image
                       className="pointer-events-none"
-                      src={reactIcon}
-                      alt="react"
-                      width={30}
-                      height={30}
-                    /> 
+                      src={mongooseIcon}
+                      alt="mongoose"
+                      width={20}
+                      height={20}
+                    />
                   </Circle>
                 </div>
                 <div className="flex flex-row items-center justify-between">
                   <Circle ref={div3Ref}>
                     <Image
-                      className="w-[50px] pointer-events-none"
-                      src={mongooseIcon}
-                      alt="react"
-                      width={50}
-                      height={50}
+                      className="pointer-events-none"
+                      src={expressIcon}
+                      alt="express"
+                      width={20}
+                      height={20}
                     />
                   </Circle>
                   <Circle ref={div7Ref}>
                     <Image
                       className="pointer-events-none"
-                      src={nextIcon}
-                      alt="redux"
-                      width={21}
-                      height={21}
+                      src={awsIcon}
+                      alt="aws"
+                      width={20}
+                      height={20}
                     />
                   </Circle>
                 </div>

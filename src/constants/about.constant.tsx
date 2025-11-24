@@ -1,92 +1,90 @@
-import { MdDevices, MdLightMode, MdOutlinePayment } from "react-icons/md";
 import { GoPackage } from "react-icons/go";
-import { GiSkills } from "react-icons/gi";
 import { FaBookReader, FaDatabase } from "react-icons/fa";
 import { BiLogoTypescript } from "react-icons/bi";
-import Image from "next/image";
-import resApi from "../assets/api.png";
-import { TbBrandRedux } from "react-icons/tb";
 import { RiEnglishInput } from "react-icons/ri";
 import { GiExpander } from "react-icons/gi";
-import { RiReactjsLine } from "react-icons/ri";
-import { FiLayout } from "react-icons/fi";
-import {
-  SiOctanerender,
-  SiTailwindcss,
-  SiJsonwebtokens,
-  SiNextdotjs,
-  SiCcleaner,
-  SiReactquery,
-} from "react-icons/si";
+import { SiNginx, SiSocketdotio } from "react-icons/si";
+import { GrGraphQl } from "react-icons/gr";
 import { BsStars } from "react-icons/bs";
+import {
+  ArrowUpWideNarrow,
+  BrainCog,
+  CloudCog,
+  Container,
+  Focus,
+  Handshake,
+  Lightbulb,
+  Users,
+  Workflow,
+} from "lucide-react";
+import { DiLinux } from "react-icons/di";
+import { VscWorkspaceTrusted } from "react-icons/vsc";
+import { AiOutlineApi } from "react-icons/ai";
 
 export const AllStrengths = [
-  { title: "Typescript Mastery", icon: <BiLogoTypescript size={20} /> },
+  { title: "Typescript Mastery", icon: <BiLogoTypescript size={19} /> },
   {
     title: "RESTful APIs",
-    icon: <Image src={resApi} width={18} height={18} alt="restful api" />,
+    icon: <AiOutlineApi size={19} />,
   },
-  { title: "Continuous Learner", icon: <FaBookReader size={20} /> },
-  { title: "Next.js Proficiency", icon: <SiNextdotjs size={19} /> },
-  { title: "JWT Authentication", icon: <SiJsonwebtokens size={18} /> },
-  { title: "Redux Toolkit", icon: <TbBrandRedux size={20} /> },
-  { title: "English Proficiency", icon: <RiEnglishInput size={20} /> },
-  { title: "Responsive Design", icon: <MdDevices size={20} /> },
-  { title: "Typescript Mastery", icon: <BiLogoTypescript size={20} /> },
-  { title: "Scalable Code", icon: <GiExpander size={18} /> },
-  { title: "Continuous Learner", icon: <FaBookReader size={20} /> },
-  { title: "React Expertise", icon: <RiReactjsLine size={20} /> },
-  { title: "UI Optimization", icon: <FiLayout size={20} /> },
-  { title: "SSG & ISR", icon: <SiOctanerender size={20} /> },
-  { title: "Tailwind CSS", icon: <SiTailwindcss size={20} /> },
-  { title: "English Proficiency", icon: <RiEnglishInput size={20} /> },
+  { title: "Continuous Learner", icon: <FaBookReader size={19} /> },
+  { title: "Clear Communication", icon: <Handshake size={19} /> },
+  { title: "Problem Solving", icon: <Lightbulb size={20} /> },
+  { title: "Backend First", icon: <GoPackage size={19} /> },
+  { title: "English Proficiency", icon: <RiEnglishInput size={19} /> },
+  { title: "Team Friendly", icon: <Users size={19} /> },
+  { title: "Typescript Mastery", icon: <BiLogoTypescript size={19} /> },
+  { title: "Scalable Code", icon: <GiExpander size={17} /> },
+  { title: "Linux Essentials", icon: <DiLinux size={19} /> },
+  { title: "Ownership Mindset", icon: <BrainCog size={19} /> },
+  { title: "Detail Focused", icon: <Focus size={19} /> },
+  { title: "Socket Uses", icon: <SiSocketdotio size={19} /> },
+  { title: "GraphQL Guru", icon: <GrGraphQl size={19} /> },
+  { title: "Nginx Knowledge", icon: <SiNginx size={19} /> },
   {
-    title: "API Integration",
-    icon: <Image src={resApi} width={18} height={18} alt="api" />,
+    title: "Reliability",
+    icon: <VscWorkspaceTrusted size={18} />,
   },
-  { title: "Theming", icon: <MdLightMode size={20} /> },
+  { title: "Cloud Computing", icon: <CloudCog size={19} /> },
   {
-    title: "Scalable APIs",
-    icon: <Image src={resApi} width={18} height={18} alt="restful api" />,
+    title: "Docker Container",
+    icon: <Container size={19} />,
   },
-  { title: "Payment Integration", icon: <MdOutlinePayment size={20} /> },
-  { title: "Continuous Learner", icon: <FaBookReader size={20} /> },
-  {
-    title: "RESTful APIs",
-    icon: <Image src={resApi} width={18} height={18} alt="restful api" />,
-  },
-  { title: "Typescript Mastery", icon: <BiLogoTypescript size={20} /> },
-  { title: "Clean Code", icon: <SiCcleaner size={20} /> },
-  { title: "Database Management", icon: <FaDatabase size={20} /> },
-  { title: "AI Integration", icon: <BsStars size={20} /> },
-  { title: "English Proficiency", icon: <RiEnglishInput size={20} /> },
-  { title: "Tanstack Query", icon: <SiReactquery size={20} /> },
+  { title: "Clear Communication", icon: <Handshake size={19} /> },
+  { title: "Continuous Learner", icon: <FaBookReader size={19} /> },
+  { title: "Team Friendly", icon: <Users size={19} /> },
+  { title: "Typescript Mastery", icon: <BiLogoTypescript size={19} /> },
+  { title: "Ownership Mindset", icon: <BrainCog size={19} /> },
+  { title: "Database Management", icon: <FaDatabase size={19} /> },
+  { title: "AI Integration", icon: <BsStars size={19} /> },
+  { title: "English Proficiency", icon: <RiEnglishInput size={19} /> },
+  { title: "DevOps Knowledge", icon: <Workflow size={19} /> },
 ];
 
 export const KeyStrengths = [
   {
-    title: "Full-Stack Expertise",
+    title: "Backend Focus",
     description:
-      "Proficient in building end-to-end applications Typescript, Mongoose, Express.Js, React.",
+      "I build APIs and databases that are simple to use and easy to maintain.",
     icon: <GoPackage size={22} />,
   },
   {
-    title: "English Proficiency",
+    title: "Good Communication",
     description:
-      "I have strong English communication skills, both written and verbal.",
+      "I ask the right questions and keep everyone aligned during development.",
     // "Skilled in creating mobile-first, responsive designs that look great on any device.",
-    icon: <RiEnglishInput size={22} />,
+    icon: <Handshake size={22} />,
   },
   {
-    title: "Modern Front-End Skills",
+    title: "Problem Solver",
     description:
-      "Focused on modern front-end development with React, Tailwind CSS, Redux and Next.js.",
-    icon: <GiSkills size={22} />,
+      "I prefer practical solutions over complexity and over-engineering.",
+    icon: <Lightbulb size={22} />,
   },
   {
-    title: "Continuous Learner",
+    title: "Always improving",
     description:
-      "Moving forward, I aim to master modern technologies like PostgreSQL, Prisma, GraphQL, and Docker",
-    icon: <FaBookReader size={22} />,
+      "I want each project I work on to be smoother and better than the last one.",
+    icon: <ArrowUpWideNarrow size={22} />,
   },
 ];

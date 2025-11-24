@@ -91,9 +91,9 @@ export const RevealText = ({
               style={{
                 textShadow: "4px 4px 15px rgba(0,0,0,0.5)",
               }}
-              className=" text-center text-2xl sm:text-4xl py-10 font-bold text-white bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-300"
+              className=" text-center text-2xl sm:text-[33px] py-10 font-bold text-white bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-300"
             >
-             I'm Fluent in English
+              I am a collage dropout
             </p>
             <p
               style={{

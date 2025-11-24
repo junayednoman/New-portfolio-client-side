@@ -43,26 +43,26 @@ const About = () => {
 
                 <div>
                   <p className="text-white-100 mt-4 text-sm">
-                    After more than a year of learning, I have developed a solid
-                    foundation in the MERN stack and have experience in building
-                    dynamic and scalable applications. In the coming year, my
-                    goal is to master modern technologies such as PostgreSQL,
-                    Prisma, GraphQL, Docker, and AWS to create secure,
-                    efficient, and future- proof solutions that address
-                    real-world challenges. I aim to build a strong foundation
-                    and increase my versatility by exploring these technologies.
+                    I’m a backend developer who enjoys building things that
+                    actually work in real life, not just look good on paper. I
+                    mostly work with TypeScript, Node.js, Express, PostgreSQL,
+                    Prisma, and MongoDB. I can take messy requirements and turn
+                    them into APIs and databases that are simple, and easy for
+                    the frontend team to use.
                   </p>
                   <p className="text-white-100 mt-3 text-sm">
-                    Furthermore, I’ll be learning new technologies to stay
-                    aligned with the industry trends and demand. Ultimately, I
-                    aspire to become a senior software developer with a
-                    comprehensive skill set and the confidence to lead projects
-                    effectively after 2-4 years.
+                    I’ve worked on real client projects where deadlines, bugs,
+                    unexpected changes, and deployment issues are part of the
+                    journey. I’ve learned to communicate clearly and ship
+                    features without overcomplicating everything. I’m still
+                    growing and learning, and I want each project I work on to
+                    be smoother and better than the last. I care about
+                    delivering something people can actually use.
                   </p>
                 </div>
               </div>
               <div className="flex items-center sm:gap-3 gap-2 mt-6">
-                <PIcon link="https://www.linkedin.com/in/junayed-noman/">
+                <PIcon link="https://www.linkedin.com/in/junayed-noman-me/">
                   <FaLinkedin size={20} />
                 </PIcon>
                 <PIcon link="https://github.com/junayednoman">
@@ -80,7 +80,7 @@ const About = () => {
                 </div>
 
                 <MagicButtonSmall
-                  link="https://drive.google.com/file/d/1S_J4ttPQRdtIUczV5XemRLk-00zE9352/view?usp=sharing"
+                  link="https://drive.google.com/file/d/19uaQSwyx3n8g9vll-4OI4vw1Vup-BWUF/view?usp=sharing"
                   target="_blank"
                   icon={<FaArrowUpRightFromSquare size={13} />}
                 >

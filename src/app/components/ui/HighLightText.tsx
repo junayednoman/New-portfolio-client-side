@@ -12,7 +12,7 @@ const HighLightText = ({
   duration?: number;
 }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true }); // Trigger only once when the element comes into view
+  const isInView = useInView(ref, { once: true });
 
   const bgVariants = {
     hidden: { backgroundSize: "0% 100%" },
@@ -35,7 +35,7 @@ const HighLightText = ({
       }}
       variants={bgVariants}
       initial="hidden"
-      animate={isInView ? "visible" : "hidden"} // Trigger the animation based on the viewport visibility
+      animate={isInView ? "visible" : "hidden"}
       transition={{ delay: 0.5 }}
     >
       <strong style={{ fontWeight: fontWeight || 500 }}>{children}</strong>

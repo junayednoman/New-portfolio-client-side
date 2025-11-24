@@ -20,9 +20,10 @@ const Hero = () => {
               filter={false}
             />
             <p className="sm:mt-10 mt-5  text-white sm:text-lg text-[15px] sm:leading-7 leading-6">
-              Full Stack Developer — mainly working on the backend with
-              <HighLightText> TypeScript, Express.js, Mongoose</HighLightText> &
-              MongoDB to build secure and scalable systems.
+              Programmer | Building with{" "}
+              <HighLightText>TypeScript, PostgreSQL, Prisma,</HighLightText>
+              Express, Mongoose & Next.js | Currently working as a
+              Backend-focused Full Stack Developer
             </p>
             <div className="flex sm:flex-row flex-col items-center gap-4 justify-center mb-2 mt-14">
               <MagicButton link="#about" icon={<FaLocationArrow />}>
@@ -33,6 +34,7 @@ const Hero = () => {
                 <MagicButton
                   link="#projects"
                   icon={<MdGeneratingTokens size={20} />}
+                  bgColor="bg-[linear-gradient(to right, #7d33cc, #e6993a)]"
                 >
                   View projects
                 </MagicButton>

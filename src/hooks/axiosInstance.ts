@@ -3,10 +3,8 @@ import axios from "axios";
 import { cookies } from "next/headers";
 
 const axiosInstance = axios.create({
-  baseURL: 'https://portfolio-server-azure-iota.vercel.app/api/v1',
-  // baseURL: 'http://localhost:5000/api/v1',
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL,
 });
-
 
 axiosInstance.interceptors.request.use(
   function (config) {
@@ -40,6 +38,5 @@ axiosInstance.interceptors.response.use(
     return Promise.reject(error);
   }
 );
-
 
 export default axiosInstance;
