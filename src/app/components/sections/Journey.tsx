@@ -7,14 +7,12 @@ export function Journey() {
       content: (
         <div className="md:mt-0 mt-2">
           <h5 className="text-white-100 font-semibold md:text-2xl text-xl">
-            Learning HTML & CSS
+            First Steps
           </h5>
           <p className="mt-2 text-neutral-200 leading-6">
-            At the end of 2021 I started my web development journey. I started
-            learning HTML and CSS, building static websites, and exploring the
-            fundamentals of web design. This phase introduced me to the world of
-            front-end development, shaping my interest in crafting visually
-            appealing, user-friendly interfaces.
+            At the end of 2021 I started learning HTML and CSS and built small
+            static sites. It was my first real look at how websites work, and it
+            helped me understand that I enjoy creating things on the web.
           </p>
         </div>
       ),
@@ -26,61 +24,25 @@ export function Journey() {
         <div className="md:mt-0 mt-2">
           <div>
             <h5 className="text-white-100 font-semibold md:text-2xl text-xl">
-              Starting MERN Stack Journey
+              Moving Toward the MERN Stack
             </h5>
             <p className="mt-2 text-neutral-200 leading-6">
-              In the mid of 2023, I began my journey into web development by
-              learning JavaScript and Tailwind CSS for responsive designs with{" "}
-              <a
-                className="font-semibold underline text-purple"
-                target="_blank"
-                href="https://web.programming-hero.com/home"
-              >
-                {" "}
-                Programming Hero
-              </a>
-              . I explored Firebase Authentication for user management and
-              gained foundational knowledge in Node.js, MongoDB, Express, and
-              JWT.
-            </p>
-            <p className="mt-2 text-neutral-200 leading-6">
-              Afterward, I collaborated on some contractual projects. In
-              particular, I got an opportunity to develop a{" "}
-              <span className="font-medium">
-                ‘data collection system’ for around 200 primary schools{" "}
-              </span>{" "}
-              that won first place in a divisional competition by the primary
-              education department.
+              In mid-2023, I started learning JavaScript and Tailwind CSS
+              through Programming Hero. I also worked with Firebase
+              Authentication and then moved into Node.js, Express, MongoDB, and
+              JWT to understand the full web workflow.
             </p>
           </div>
           <div className="mt-7">
             <h5 className="text-white-100 font-semibold md:text-2xl text-xl">
-              Dropping Out of College
+              Leaving College
             </h5>
             <div className="mt-2 text-neutral-200 leading-6">
-              In August 2023, I made the challenging decision to drop out of
-              college at the end the 2nd year. But why?
-              <div className="pl-4 mt-4 space-y-3">
-                <p className=" text-neutral-200">
-                  <span className="font-medium">
-                    1. Unconventional mindset 😎:
-                  </span>{" "}
-                  I reject the idea that there's a single, prescribed way to
-                  succeed. Love to be crazy . I don't consider the existing
-                  system as constant. Instead, I wanna go beyond that. "No one
-                  has ever changed the world by doing what the world has told
-                  them to do." -Eddy Zhong
-                </p>
-                <p className=" text-neutral-200">
-                  <span className="font-medium">
-                    2. Early Career Opportunities:
-                  </span>{" "}
-                  I strongly believe in starting career early. As I began
-                  Exploring Web Development and Gaining Practical Experience, I
-                  realized that I could start my career early in the tech field
-                  by focusing on developing industry standard skills.
-                </p>
-              </div>
+              In August 2023, I decided to drop out of college during my second
+              year. My reason was simple: I wanted to learn real skills and
+              start working earlier instead of waiting until graduation. I felt
+              I could grow faster by focusing fully on development and building
+              practical experience.
             </div>
           </div>
         </div>
@@ -92,21 +54,12 @@ export function Journey() {
         <div className="md:mt-0 mt-2">
           <div>
             <h5 className="text-white-100 font-semibold md:text-2xl text-xl">
-              Diving Deep into MERN Stack
+              Going Deeper
             </h5>
             <p className="mt-2 text-neutral-200 leading-6">
-              In mid-2024, I enrolled in the <strong>Level 2</strong> course by{" "}
-              <a
-                className="font-semibold underline text-purple"
-                target="_blank"
-                href="https://web.programming-hero.com/home"
-              >
-                {" "}
-                Programming Hero
-              </a>
-              . During this course, I explored key technologies like TypeScript,
-              Express.js, Mongoose, Next.js, and Redux, further enhancing my
-              skills to build robust and scalable web applications.
+              In 2024, I continued learning through Programming Hero Level 2. I
+              worked with TypeScript, Express, Mongoose, Next.js, and Redux and
+              started building more structured and real projects.
             </p>
           </div>
         </div>
@@ -118,19 +71,20 @@ export function Journey() {
         <div className="md:mt-0 mt-2">
           <div>
             <h5 className="text-white-100 font-semibold md:text-2xl text-xl">
-              Starting professional career
+              Starting my career
             </h5>
             <p className="mt-2 text-neutral-200 leading-6">
-              In December 2024, I joined 'Spark Tech' as a Junior Full Stack
-              Developer. While my designation is full-stack, my focus is
-              primarily on backend development. I am responsible for designing
-              and developing APIs and seamlessly integrating them with the
-              frontend.
+              In December 2024, I joined Spark Tech as a Junior Full Stack
+              Developer. Even though the role is full-stack, most of my work
+              focuses on backend development—API design, server logic, and
+              working closely with the frontend.
             </p>
             <p className="mt-2 text-neutral-200 leading-6">
-              In 2025, I aim to level up my skills in PostgreSQL, Prisma ORM, and dive into GraphQL. I also plan to
-              explore Docker and AWS to take my backend development to the next
-              level.
+              In the mid of this year I started taking PostgreSQL, Prisma more
+              seriously. I’ve been learning how to write better SQL, model data
+              properly, and use Prisma to speed up development. I’ve also begun
+              working with Docker and AWS so I can understand hosting,
+              deployments, and real-world backend environments better.
             </p>
           </div>
         </div>
