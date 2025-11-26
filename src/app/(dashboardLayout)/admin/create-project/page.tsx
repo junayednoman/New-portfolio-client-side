@@ -92,8 +92,7 @@ const CreateProject = () => {
         <div>
           <PForm
             resolver={zodResolver(projectValidationSchema)}
-            handleFormSubmit={handleSubmit}
-          >
+            handleFormSubmit={handleSubmit}>
             <div className="space-y-2 w-[600px]">
               <PInput
                 name="title"

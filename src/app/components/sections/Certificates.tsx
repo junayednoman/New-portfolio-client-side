@@ -96,7 +96,7 @@ export const Certificates = ({
                           draggable={false}
                           className="w-full rounded-2xl object-cover object-center md:h-[350px] h-[250px]"
                         />
-                        <div className="absolute bg-black/20 inset-0 "></div>
+                         <div className="absolute bg-black/20 inset-0 "></div>
                       </div>
                     </a>
                   </motion.div>

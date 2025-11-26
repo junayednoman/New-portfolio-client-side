@@ -19,8 +19,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Junayed Noman - MERN Stack Developer",
-  description: "A MERN Stack Web Developer",
+  title: "Junayed Noman - Full stack developer",
+  description: "A Full Stack Web Developer",
 };
 
 export default function RootLayout({

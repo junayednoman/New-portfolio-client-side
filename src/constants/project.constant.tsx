@@ -3,7 +3,7 @@ import typescriptIcon from "../assets/typescript-svgrepo-com.svg";
 import reactIcon from "../assets/react.svg";
 import reduxIcon from "../assets/redux-svgrepo-com.svg";
 import nodeIcon from "../assets/nodejs-icon-svgrepo-com.svg";
-import { SiMongoose } from "react-icons/si";
+import { SiMongoose, SiPrisma, SiSocketdotio } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 import mongodbIcon from "../assets/mongodb.svg";
 import firebaseIcon from "../assets/icons8-firebase-48.svg";
@@ -11,6 +11,8 @@ import nextIcon from "../assets/nextjs-icon.svg";
 import tailwindIcon from "../assets/tailwind-css-icon.svg";
 import javascriptIcon from "../assets/JavaScript.svg";
 import tanstackIcon from "../assets/logos--react-query-icon.svg";
+import postGresIcon from "../assets/postgresql.svg";
+import { FaAws } from "react-icons/fa";
 
 //   javascript, html, css, tanstack, axios, react-hook, next-, formik,
 
@@ -26,9 +28,23 @@ export const projectTechs = {
   mongodb: <Image alt="mongodb" src={mongodbIcon} width={32} height={32} />,
   firebase: <Image alt="firebase" src={firebaseIcon} width={22} height={22} />,
   nextjs: <Image alt="nextjs" src={nextIcon} width={24} height={24} />,
-  tailwind: <Image alt="html" src={tailwindIcon} width={22} height={22} />,
-  javascript: <Image alt="html" src={javascriptIcon} width={21} height={21} />,
-  tanstack: <Image alt="html" src={tanstackIcon} width={23} height={23} />,
+  tailwind: <Image alt="tailwind" src={tailwindIcon} width={22} height={22} />,
+  javascript: (
+    <Image alt="javascript" src={javascriptIcon} width={21} height={21} />
+  ),
+  tanstack: <Image alt="tanstack" src={tanstackIcon} width={23} height={23} />,
+  prisma: <SiPrisma size={23} className="text-white" />,
+  postgresql: (
+    <Image
+      alt="postgres"
+      className="text-white"
+      src={postGresIcon}
+      width={23}
+      height={23}
+    />
+  ),
+  socket: <SiSocketdotio size={23} className="text-white" />,
+  aws: <FaAws size={23} className="text-white" />,
 };
 
 export const projects = [
@@ -86,6 +102,10 @@ export const techOptions = [
   { value: "react", label: "React" },
   { value: "redux", label: "Redux" },
   { value: "typescript", label: "Typescript" },
+  { value: "prisma", label: "Prisma" },
+  { value: "postgresql", label: "PostgreSQL" },
+  { value: "socket", label: "Socket" },
+  { value: "aws", label: "AWS" },
   { value: "node", label: "Node" },
   { value: "express", label: "Express" },
   { value: "mongoose", label: "Mongoose" },

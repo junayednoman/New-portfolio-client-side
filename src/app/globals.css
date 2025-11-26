@@ -327,6 +327,18 @@ a {
   border-radius: 12px;
 }
 
+.projectModal {
+  width: 800px !important;
+}
+
+.projectModal .ant-modal-footer{
+  display: none !important;
+}
+
+.projectModal .css-dev-only-do-not-override-ccdg5a {
+  padding: 20px 24px !important;
+}
+
 /* Import Ant Design reset first to avoid conflicts */
 /* @import "antd/dist/reset.css"; */
 

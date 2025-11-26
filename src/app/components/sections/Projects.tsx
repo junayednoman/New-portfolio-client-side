@@ -16,7 +16,6 @@ const Projects = () => {
     return <PurpleLoading />;
   }
   const projects = data?.data?.result || [];
-
   return (
     <section id="projects" className="md:py-14 py-8">
       <Container>

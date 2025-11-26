@@ -76,7 +76,7 @@ const BlogDetails = ({ params }: { params: { blogId: string } }) => {
                 <h5 className="text-lg text-white-100 font-semibold">
                   Junayed Noman
                 </h5>
-                <p className="text-white-200 text-sm">MERN stack developer</p>
+                <p className="text-white-200 text-sm">Full stack developer</p>
               </div>
             </div>
           </div>
