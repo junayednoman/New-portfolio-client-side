@@ -58,7 +58,7 @@ export function Journey() {
             </h5>
             <p className="mt-2 text-neutral-200 leading-6">
               In 2024, I continued learning through Programming Hero Level 2. I
-              worked with TypeScript, Express, Mongoose, Next.js, and Redux and
+              explored TypeScript, Express, Mongoose, Next.js, and Redux and
               started building more structured and real projects.
             </p>
           </div>
@@ -80,7 +80,7 @@ export function Journey() {
               working closely with the frontend.
             </p>
             <p className="mt-2 text-neutral-200 leading-6">
-              In the mid of this year I started taking PostgreSQL, Prisma more
+              In the mid of 2025 I started taking PostgreSQL, Prisma more
               seriously. I’ve been learning how to write better SQL, model data
               properly, and use Prisma to speed up development. I’ve also begun
               working with Docker and AWS so I can understand hosting,
