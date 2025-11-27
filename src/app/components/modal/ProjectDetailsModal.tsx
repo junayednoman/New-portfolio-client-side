@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { ReactNode, useState } from "react";
 import { Button, Modal } from "antd";
 import Image from "next/image";
 import MagicButtonSmall from "../ui/MagicButtonSmall";
 import { FaGithub } from "react-icons/fa";
 
-const ProjectDetailsModal = ({children}) => {
+const ProjectDetailsModal = ({ children }: { children: ReactNode }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const showModal = () => {
