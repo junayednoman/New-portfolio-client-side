@@ -23,7 +23,7 @@ export function ProjectCard({ project }: { project: TProject }) {
             height={300}
             alt={title}
           />
-          <div className="absolute bg-black/15 inset-0 "></div>
+          <div className="absolute bg-black/5 inset-0 "></div>
         </Link>
       </div>
       <CardTitle
