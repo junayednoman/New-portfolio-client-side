@@ -22,7 +22,7 @@ const CTA = () => {
               <div className="relative">
                 <MagicButton
                   blank
-                  link="https://www.linkedin.com/in/junayed-noman/"
+                  link="https://drive.google.com/file/d/19uaQSwyx3n8g9vll-4OI4vw1Vup-BWUF/view?usp=sharing"
                   className="mt-8"
                 >
                   Hire me

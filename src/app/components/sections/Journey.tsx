@@ -27,8 +27,8 @@ export function Journey() {
               Moving Toward the MERN Stack
             </h5>
             <p className="mt-2 text-neutral-200 leading-6">
-              In mid-2023, I started learning JavaScript and Tailwind CSS
-              through Programming Hero. I also worked with Firebase
+              In mid-2023, I started learning JavaScript, React.js, Next.js and
+              Tailwind CSS through Programming Hero. I also worked with Firebase
               Authentication and then moved into Node.js, Express, MongoDB, and
               JWT to understand the full web workflow.
             </p>
@@ -38,11 +38,12 @@ export function Journey() {
               Leaving College
             </h5>
             <div className="mt-2 text-neutral-200 leading-6">
-              In August 2023, I decided to drop out of college during my second
-              year. My reason was simple: I wanted to learn real skills and
-              start working earlier instead of waiting until graduation. I felt
-              I could grow faster by focusing fully on development and building
-              practical experience.
+              In August 2023, I decided to leave college in my second year. I
+              wanted to focus on learning real skills, start my career early,
+              and support my family. I’ve never believed everyone has to follow
+              the usual path, so I chose to take my own way—even if it felt a
+              little crazy. The chance to follow my freedom and help my family
+              drove my decision, and I’m proud I did it.
             </div>
           </div>
         </div>
@@ -54,7 +55,7 @@ export function Journey() {
         <div className="md:mt-0 mt-2">
           <div>
             <h5 className="text-white-100 font-semibold md:text-2xl text-xl">
-              Going Deeper
+              Going Deeper in Programming
             </h5>
             <p className="mt-2 text-neutral-200 leading-6">
               In 2024, I continued learning through Programming Hero Level 2. I
@@ -80,11 +81,13 @@ export function Journey() {
               working closely with the frontend.
             </p>
             <p className="mt-2 text-neutral-200 leading-6">
-              In the mid of 2025 I started taking PostgreSQL, Prisma more
+              In the middle of 2025, I started taking PostgreSQL and Prisma more
               seriously. I’ve been learning how to write better SQL, model data
               properly, and use Prisma to speed up development. I’ve also begun
-              working with Docker and AWS so I can understand hosting,
-              deployments, and real-world backend environments better.
+              working with Docker and AWS to understand hosting, deployments,
+              and real-world backend environments better. I’m currently applying
+              these new technologies in my projects to put what I learn into
+              practice.
             </p>
           </div>
         </div>

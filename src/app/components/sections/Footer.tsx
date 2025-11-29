@@ -14,7 +14,7 @@ const Footer = () => {
             reserved
           </p>
           <div className="flex items-center sm:gap-4 gap-2">
-            <PIcon link="https://www.linkedin.com/in/junayed-noman/">
+            <PIcon link="https://www.linkedin.com/in/junayed-noman-me">
               <FaLinkedin size={20} />
             </PIcon>
             <PIcon link="https://github.com/junayednoman">
@@ -30,7 +30,7 @@ const Footer = () => {
             </div>
 
             <MagicButtonSmall
-              link="https://drive.google.com/file/d/1jzVcu0C6xbtb_iwm4S2ZCarKCjAXXp1B/view?usp=sharing"
+              link="https://drive.google.com/file/d/19uaQSwyx3n8g9vll-4OI4vw1Vup-BWUF/view?usp=sharing"
               target="_blank"
               icon={<FaArrowUpRightFromSquare size={13} />}
             >

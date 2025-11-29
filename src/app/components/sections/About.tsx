@@ -62,7 +62,7 @@ const About = () => {
                 </div>
               </div>
               <div className="flex items-center sm:gap-3 gap-2 mt-6">
-                <PIcon link="https://www.linkedin.com/in/junayed-noman-me/">
+                <PIcon link="https://www.linkedin.com/in/junayed-noman-me">
                   <FaLinkedin size={20} />
                 </PIcon>
                 <PIcon link="https://github.com/junayednoman">
